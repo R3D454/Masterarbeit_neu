@@ -13,6 +13,7 @@
 
 #include "Model/Air.h"
 #include "string"
+#include <list>
 
 namespace Model {
 class sensor;
@@ -26,6 +27,12 @@ namespace Model {
  */
 class civilPlane: public Air {
 public:
+	/**
+	 *
+	 * @param Name
+	 * @param Typ
+	 */
+	civilPlane(std::string /*in*/n, std::string /*in*/t);
 
 	/**
 	 *
@@ -36,20 +43,15 @@ public:
 	 *
 	 * @param sensor
 	 */
-	void addSensor(sensor /*in*/sensor);
+	void addSensor(sensor /*in*/*s);
 
-	/**
-	 *
-	 * @param Name
-	 * @param Typ
-	 */
-	civilPlane(std::string /*in*/Name, std::string /*in*/Typ);
+
 
 	/**
 	 *
 	 * @return sensors
 	 */
-	sensor getSensors();
+	std::list<sensor*> getSensors();
 	/*
 	 *
 	 *
@@ -59,7 +61,7 @@ private:
 	/**
 	 *
 	 */
-	sensor* sensors;
+	 std::list<sensor*> sensorList;
 };
 /************************************************************/
 /* External declarations (package visibility)               */

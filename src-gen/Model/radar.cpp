@@ -18,33 +18,35 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
- * @param type 
- * @param range 
- * @param name 
+ *
+ * @param type
+ * @param range
+ * @param name
  */
-radar::radar(std::string /*in*/type, float /*in*/range,
-		std::string /*in*/name) {
+radar::radar(std::string /*in*/n,std::string /*in*/t, float /*in*/r) : Range(r) {
+	sensor::setName(n);
+	sensor::setType(t);
 }
 
 /**
- * 
+ *
  */
 void radar::printInfo() {
 }
 
 /**
- * 
- * @param Name 
+ *
+ * @param Name
  */
-void radar::setRange(std::string /*in*/Name) {
+void radar::setRange(float /*in*/r) {
 }
 
 /**
- * 
- * @return type 
+ *
+ * @return type
  */
-std::string radar::getRange() {
+float radar::getRange() {
+	return Range;
 }
 
 } // of namespace Model

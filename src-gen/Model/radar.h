@@ -19,41 +19,41 @@ namespace Model {
 
 /************************************************************/
 /**
- * 
+ *
  */
 class radar: public sensor {
 public:
 
 	/**
-	 * 
-	 * @param type 
-	 * @param range 
-	 * @param name 
+	 *
+	 * @param type
+	 * @param range
+	 * @param name
 	 */
-	radar(std::string /*in*/type, float /*in*/range, std::string /*in*/name);
+	radar( std::string /*in*/n,std::string /*in*/t, float /*in*/r);
 
 	/**
-	 * 
+	 *
 	 */
 	void printInfo();
 
 	/**
-	 * 
-	 * @param Name 
+	 *
+	 * @param Name
 	 */
-	void setRange(std::string /*in*/Name);
+	void setRange(float /*in*/f);
 
 	/**
-	 * 
-	 * @return type 
+	 *
+	 * @return type
 	 */
-	std::string getRange();
+	float getRange();
 
 private:
 	/**
-	 * 
+	 *
 	 */
-	float range;
+	float Range;
 };
 /************************************************************/
 /* External declarations (package visibility)               */

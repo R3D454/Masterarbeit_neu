@@ -95,6 +95,7 @@ public:
 	 */
 	 virtual void printInfo();
 
+	 void creatDIS_PDU();
 
 protected:
 

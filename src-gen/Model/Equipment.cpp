@@ -44,11 +44,18 @@ return Name;
 
 /**
  *
- * @return Name
+ * @return list of weapons
  */
-// std::list Equipment::getWeapon() {
-// }
-
+ std::list<weapon*> Equipment::getWeapon() {
+   return weaponList;
+}
+/**
+ *
+ * @return list of sensors
+ */
+std::list<sensor*> Equipment::getSensor() {
+  return sensorList;
+}
 /**
  *
  * @param w
@@ -69,11 +76,16 @@ void Equipment::addSensor(sensor* /*in*/s) {
  */
 void Equipment::printInfo() {
   std::cout<< "Equipment Name:" <<Name <<std::endl;
-	for(std::list<weapon*>::iterator it=weaponList.begin(); it != weaponList.end(); ++it)
-		{
-			(*it)->printInfo();
-			//std::cout<<" "<<std::endl;
-		}
+  if(!weaponList.empty()){
+  	for(std::list<weapon*>::iterator it=weaponList.begin(); it != weaponList.end(); ++it)
+  		{
+  			(*it)->printInfo();
+  			//std::cout<<" "<<std::endl;
+  		}
+  }
+  else {
+    std::cout << "list is empty" << '\n';
+  }
 }
 
 } // of namespace Model

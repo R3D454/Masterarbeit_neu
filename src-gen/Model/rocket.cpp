@@ -18,31 +18,23 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
- * @param t 
+ *
+ * @param t
  */
-rocket::rocket(std::string /*in*/t) {
+rocket::rocket(std::string /*in*/n,	std::string /*in*/t, int /*in*/r) : Range(r) {
+  weapon::setName(n);
+	weapon::setType(t);
 }
 
 /**
- * 
+ *
  */
 void rocket::printInfo() {
+  std::cout<< "Name:"<<weapon::getName() << " Type:"<<weapon::getType() << " Range:" << Range<<std::endl;
+
 }
 
-/**
- * 
- * @param Name 
- */
-void rocket::setType(std::string /*in*/Name) {
-}
 
-/**
- * 
- * @param type 
- */
-void rocket::getType(std::string /*in*/type) {
-}
 
 } // of namespace Model
 

@@ -65,6 +65,8 @@ void cannon::setMunition(Munition* /*in*/m) {
  *
  */
 void cannon::printInfo() {
+	std::cout<<"Name:"<< weapon::getName()<<" Type:"<<weapon::getType()<<" Caliber:" <<Caliber<<std::endl;
+
 }
 
 } // of namespace Model

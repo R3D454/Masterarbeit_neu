@@ -18,60 +18,65 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
- * @param name 
- * @param cells 
- * @param type 
+ *
+ * @param name
+ * @param cells
+ * @param type
  */
-vls::vls(std::string /*in*/name, std::string /*in*/cells,
-		std::string /*in*/type) {
+vls::vls(std::string /*in*/n, std::string /*in*/t, int /*in*/number) : numberOfCells(number) {
+weapon::setName(n);
+weapon::setType(t);
 }
 
 /**
- * 
+ *
  */
 void vls::printInfo() {
+	std::cout<< "Name:" << weapon::getName()<< " Type:"<<weapon::getType()
+	<< " Number of cells:" << numberOfCells<<std::endl;
+	std::cout<<"Rockets:" <<std::endl;
+
+	for(std::list<rocket*>::iterator it=rocketList.begin(); it != rocketList.end(); ++it)
+			{
+				(*it)->printInfo();
+				//std::cout<<" "<<std::endl;
+			}
 }
 
+
 /**
- * 
- * @param type 
+ *
+ * @param rocket
  */
-void vls::getType(std::string /*in*/type) {
+void vls::addRocket(rocket /*in*/*r) {
+	rocketList.push_back(r);
+
 }
 
 /**
- * 
- * @param Name 
+ *
+ * @param
  */
-void vls::setType(std::string /*in*/Name) {
+void vls::rmRocket(rocket /*in*/*r) {
+	rocketList.remove(r);
+
 }
 
 /**
- * 
- * @param rocket 
- */
-void vls::addRocket(rocket /*in*/rocket) {
-}
-
-/**
- * 
- * @param  
- */
-void vls::rmRocket(rocket /*in*/null) {
-}
-
-/**
- * 
- * @param n 
+ *
+ * @param n
  */
 void vls::setNumberOfCells(int /*in*/n) {
+	numberOfCells = n;
+
 }
 
 /**
- * 
+ *
  */
 void vls::getNumberOfCells() {
+	return numberOfCells;
+
 }
 
 } // of namespace Model

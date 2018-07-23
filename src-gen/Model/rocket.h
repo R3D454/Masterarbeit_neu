@@ -20,39 +20,30 @@ namespace Model {
 
 /************************************************************/
 /**
- * 
+ *
  */
 class rocket: public Munition, public weapon {
 public:
 
 	/**
-	 * 
-	 * @param t 
+	 *
+	 * @param t
 	 */
-	rocket(std::string /*in*/t);
+	rocket(std::string /*in*/n,	std::string /*in*/t, int /*in*/r);
 
 	/**
-	 * 
+	 *
 	 */
 	void printInfo();
 
-	/**
-	 * 
-	 * @param Name 
-	 */
-	void setType(std::string /*in*/Name);
+	
 
-	/**
-	 * 
-	 * @param type 
-	 */
-	void getType(std::string /*in*/type);
 
 private:
 	/**
-	 * 
+	 *
 	 */
-	int range;
+	int Range;
 };
 /************************************************************/
 /* External declarations (package visibility)               */

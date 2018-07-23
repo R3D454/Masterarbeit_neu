@@ -17,63 +17,63 @@ namespace Model {
 
 /************************************************************/
 /**
- * 
+ *
  */
 class sensor {
 public:
 
 	/**
-	 * 
-	 * @param n 
+	 *
+	 * @param n
 	 */
 	void setName(std::string /*in*/n);
 
 	/**
-	 * 
-	 * @return name 
+	 *
+	 * @return name
 	 */
 	std::string getName();
 
 	/**
-	 * 
+	 *
 	 */
-	virtual void printInfo() = 0;
+	virtual void printInfo();
 
 	/**
-	 * 
-	 * @param name 
+	 *
+	 * @param name
 	 */
-	void setCategory(std::string /*in*/name);
+	void setCategory(std::string /*in*/c);
 
 	/**
-	 * 
-	 * @return  
+	 *
+	 * @return
 	 */
 	std::string getCategory();
 
 	/**
-	 * 
-	 * @return type 
+	 *
+	 * @return type
 	 */
 	std::string getType();
 
 	/**
-	 * 
-	 * @param Name 
+	 *
+	 * @param Name
 	 */
-	void setType(std::string /*in*/Name);
+	void setType(std::string /*in*/t);
 
 private:
 	/**
-	 * 
+	 *
 	 */
-	std::string name;
+	std::string Name;
 	/**
-	 * 
+	 *
 	 */
 	std::string Category;
 	/**
-	 * 
+	 *
 	 */
 	std::string Type;
 };

@@ -18,48 +18,54 @@ namespace Model {
 
 /************************************************************/
 /**
- * 
+ *
  */
 class Munition {
 public:
 
 	/**
-	 * 
-	 * @param value 
+	 *
+	 * @param type
 	 */
-	void setType(std::string /*in*/value);
+	void setType(std::string /*in*/t);
+	/**
+	 *
+	 * @param kind
+	 */
+	void setkind(int /*in*/ k);
+	/**
+	 *
+	 * @return kind
+	 */
+	int getkind();
 
 	/**
-	 * 
-	 * @return value 
-	 */
-	std::string getkind();
-
-	/**
-	 * 
-	 * @return value 
+	 *
+	 * @return fuse
 	 */
 	std::string getFuse();
 
 	/**
-	 * 
-	 * @param value 
+	 *
+	 * @param fuse
 	 */
-	void setFuse(std::string /*in*/value);
+	void setFuse(std::string /*in*/f);
+
+
 
 private:
 	/**
-	 * 
+	 *
 	 */
 	int Kind;
 	/**
-	 * 
+	 *
 	 */
-	std::string fuse;
+	std::string Fuse;
 	/**
-	 * 
+	 *
 	 */
-	std::string typ;
+	std::string Typ;
 };
 /************************************************************/
 /* External declarations (package visibility)               */

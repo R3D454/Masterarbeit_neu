@@ -18,47 +18,54 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
- * @param n 
+ *
+ * @param n
  */
 void sensor::setName(std::string /*in*/n) {
+Name = n;
 }
 
 /**
- * 
- * @return name 
+ *
+ * @return name
  */
 std::string sensor::getName() {
+  return Name;
 }
 
 /**
- * 
- * @param name 
+ *
+ * @param name
  */
-void sensor::setCategory(std::string /*in*/name) {
+void sensor::setCategory(std::string /*in*/c) {
+  Category = c;
 }
 
 /**
- * 
- * @return  
+ *
+ * @return
  */
 std::string sensor::getCategory() {
+  return Category;
 }
 
 /**
- * 
- * @return type 
+ *
+ * @return type
  */
 std::string sensor::getType() {
+  return Type;
 }
 
 /**
- * 
- * @param Name 
+ *
+ * @param Name
  */
-void sensor::setType(std::string /*in*/Name) {
+void sensor::setType(std::string /*in*/t) {
+  Type = t;
 }
 
+void sensor::printInfo(){}
 } // of namespace Model
 
 /************************************************************

@@ -19,33 +19,43 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
+ *
  */
 void civilPlane::rmSensor() {
+  sensorList.clear();
 }
 
 /**
- * 
- * @param sensor 
+ *
+ * @param sensor
  */
-void civilPlane::addSensor(sensor /*in*/sensor) {
+void civilPlane::addSensor(sensor /*in*/*s) {
+  sensorList.push_back(s);
+
 }
 
 /**
- * 
- * @param Name 
- * @param Typ 
+ *
+ * @param Name
+ * @param Typ
  */
-civilPlane::civilPlane(std::string /*in*/Name, std::string /*in*/Typ) {
+civilPlane::civilPlane(std::string /*in*/n, std::string /*in*/t) {
+object::setName(n);
+driven::setType(t);
+object::setKind("Platform");
 }
 
 /**
- * 
- * @return sensors 
+ *
+ * @return sensors
  */
-sensor civilPlane::getSensors() {
+std::list<sensor*> civilPlane::getSensors() {
+  return sensorList;
 }
+void civilPlane::printInfo(){
+	  std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
 
+}
 } // of namespace Model
 
 /************************************************************

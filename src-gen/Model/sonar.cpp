@@ -18,17 +18,21 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
- * @param name 
- * @param type 
+ *
+ * @param name
+ * @param type
  */
-sonar::sonar(std::string /*in*/name, std::string /*in*/type) {
+sonar::sonar(std::string /*in*/n, std::string /*in*/t) {
+  sensor::setName(n);
+	sensor::setType(t);
 }
 
 /**
- * 
+ *
  */
 void sonar::printInfo() {
+  std::cout<< "Name:"<< sensor::getName()<<" Type:"<< sensor::getType()<< std::endl;
+
 }
 
 } // of namespace Model

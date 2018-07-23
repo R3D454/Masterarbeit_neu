@@ -18,20 +18,20 @@ namespace Model {
 
 /************************************************************/
 /**
- * 
+ *
  */
 class sonar: public sensor {
 public:
 
 	/**
-	 * 
-	 * @param name 
-	 * @param type 
+	 *
+	 * @param name
+	 * @param type
 	 */
-	sonar(std::string /*in*/name, std::string /*in*/type);
+	sonar(std::string /*in*/n, std::string /*in*/t);
 
 	/**
-	 * 
+	 *
 	 */
 	void printInfo();
 

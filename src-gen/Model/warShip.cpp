@@ -36,6 +36,8 @@ warShip::warShip(std::string /*in*/Name, std::string /*in*/Typ) {
 object::setName(Name);
 driven::setType(Typ);
 object::setKind("Platform");
+equipment = NULL;
+
 }
 
 /**
@@ -56,7 +58,8 @@ void warShip::calcShoot() {
  * @return equipment
  */
 Equipment* warShip::getEquipment() {
-return equipment;
+  
+    return equipment;
 }
 
 

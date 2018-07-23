@@ -20,67 +20,54 @@ namespace Model {
 
 /************************************************************/
 /**
- * 
+ *
  */
 class vls: public weapon {
 public:
 
 	/**
-	 * 
-	 * @param name 
-	 * @param cells 
-	 * @param type 
+	 *
+	 * @param name n
+	 * @param cells
+	 * @param type t
 	 */
-	vls(std::string /*in*/name, std::string /*in*/cells,
-			std::string /*in*/type);
+	vls(std::string /*in*/n, std::string /*in*/t, int /*in*/number);
 
 	/**
-	 * 
+	 *
 	 */
 	void printInfo();
 
 	/**
-	 * 
-	 * @param type 
+	 *
+	 * @param rocket
 	 */
-	void getType(std::string /*in*/type);
+	void addRocket(rocket /*in*/*r);
 
 	/**
-	 * 
-	 * @param Name 
-	 */
-	void setType(std::string /*in*/Name);
-
-	/**
-	 * 
-	 * @param rocket 
-	 */
-	void addRocket(rocket /*in*/rocket);
-
-	/**
-	 * 
-	 * @param  
+	 *
+	 * @param
 	 */
 	void rmRocket(rocket /*in*/null);
 
 	/**
-	 * 
-	 * @param n 
+	 *
+	 * @param n
 	 */
 	void setNumberOfCells(int /*in*/n);
 
 	/**
-	 * 
+	 *
 	 */
 	void getNumberOfCells();
 
 private:
 	/**
-	 * 
+	 *
 	 */
-	rocket rockets[];
+	 std::list<rocket*> rocketList;
 	/**
-	 * 
+	 *
 	 */
 	int numberOfCells;
 };

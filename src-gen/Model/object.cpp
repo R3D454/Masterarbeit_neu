@@ -120,7 +120,7 @@ void object::setKind(std::string /*in*/k) {
  *
  * @return value
  */
-std::string object::getkind() {
+std::string object::getKind() {
 	return Kind;
 }
 
@@ -135,7 +135,11 @@ std::string object::getkind() {
 // void object::convertToDIS(undefined /*in*/location, undefined /*in*/orientation,
 // 		Equipment /*in*/equipment, int /*in*/category, int /*in*/subCategory) {
 // }
+	void object::setDIS_EntityType_Variables(int kind, int domain, int country, int category, int subCategory, int specific, int extra){
+	DIS_EntityType.Kind = kind;
 
+
+	}
 } // of namespace Model
 
 /************************************************************

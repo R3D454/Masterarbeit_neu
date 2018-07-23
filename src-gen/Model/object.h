@@ -16,6 +16,7 @@
 #include "string"
 #include "externeFunktionen/pos_convert.h"
 
+#include "DIS_enum.h"
 
 namespace Model {
 class Equipment;
@@ -106,7 +107,7 @@ public:
 	 *
 	 * @return value
 	 */
-	std::string getkind();
+	std::string getKind();
 	/**
 	 *
 	 *
@@ -134,6 +135,8 @@ public:
 	// void convertToDIS(undefined /*in*/location, undefined /*in*/orientation,
 	// 		Equipment /*in*/equipment, int /*in*/category,
 	// 		int /*in*/subCategory);
+
+	void setDIS_EntityType_Variables(int kind, int domain, int country, int category, int subCategory, int specific, int extra);
 
 private:
 	/**

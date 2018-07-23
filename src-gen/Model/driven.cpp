@@ -107,8 +107,33 @@ std::string driven::getType() {
 }
 
 void driven::printInfo(){
-  
+
 }
+
+ void driven::creatDIS_PDU() {
+   //entity Type
+   // std::string ki = driven::getkind();
+   enum kindValue {
+     Other = 0,
+     Platform = 1,
+     Munition = 2,
+     Life_form = 3,
+     Environmental = 4,
+     Cultural_feature = 5,
+     Supply = 6,
+     Radio = 7,
+     Expendalbe = 8,
+     Sensor_Emmiter = 9
+     };
+
+     
+
+   // std::string cat = driven::getCategory();
+   // std::string count = driven::getCountry();
+   // std::string dom = driven::getDomain();
+   // std::string typ = driven::getType();
+
+ }
 
 } // of namespace Model
 

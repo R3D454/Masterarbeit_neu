@@ -55,10 +55,14 @@ std::string getName();
 
 	/**
 	 *
-	 * @return Name
+	 * @return list of weapos
 	 */
-	// Model::weapon getWeapon();
-
+ std::list<weapon*> getWeapon();
+ /**
+  *
+  * @return list of sensors
+  */
+ std::list<sensor*> getSensor();
 	/**
 	 *
 	 * @param Name

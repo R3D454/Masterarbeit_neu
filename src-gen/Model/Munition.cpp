@@ -18,31 +18,44 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
- * @param value 
+ *
+ * @param type
  */
-void Munition::setType(std::string /*in*/value) {
+void Munition::setType(std::string /*in*/t) {
+  Typ = t;
+
+}
+/**
+ *
+ * @param kind
+ */
+ void Munition::setkind(int /*in*/ k){
+
+   Kind = k;
+ }
+/**
+ *
+ * @return kind
+ */
+int Munition::getkind() {
+  return Kind;
 }
 
 /**
- * 
- * @return value 
- */
-std::string Munition::getkind() {
-}
-
-/**
- * 
- * @return value 
+ *
+ * @return fuse
  */
 std::string Munition::getFuse() {
+  return Fuse;
 }
 
 /**
- * 
- * @param value 
+ *
+ * @param fuse
  */
-void Munition::setFuse(std::string /*in*/value) {
+void Munition::setFuse(std::string /*in*/f) {
+  Fuse = f;
+
 }
 
 } // of namespace Model
