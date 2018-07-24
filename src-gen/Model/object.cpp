@@ -125,7 +125,7 @@ std::string object::getKind() {
 }
 
 void object::creatDIS_PDU(){
-// DISUnit.setProtocolVersion(6);
+DISUnit.setProtocolVersion(6);
 
 
 }
