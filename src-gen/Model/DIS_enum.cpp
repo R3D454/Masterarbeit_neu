@@ -68,6 +68,7 @@ namespace Model {
     CategorySurface[4]="Guided Missile Destroyer (DDG)";
     CategorySurface[5]="Destroyer (DD)";
     CategorySurface[6]="Guided Missile Frigate (FFG)";
+    CategorySurface[6]="Guided Missile Frigate (FFG)";
     CategorySurface[7]="Light/Patrol Craft";
     CategorySurface[8]="Mine Countermeasure Ship/Craft";
     /*
@@ -113,8 +114,6 @@ namespace Model {
 
 
 
-
-
     GermanLandTankSubcategory[1] = "Leopard 1";
     GermanLandTankSubcategory[2] = "Leopard 2";
     GermanLandTankSubcategory[3] = "Leopard 2 (improved)";
@@ -153,35 +152,34 @@ namespace Model {
     RussiaLandTankSubcategory[2] = "T-72";
     RussiaLandTankSubcategory[3] = "T-64";
 
-    RussiaCarrier[] = "";
-    RussiaCarrier[] = "";
-    RussiaCarrier[] = "";
+    RussiaCarrier[3] = "Kuznetsov class";
+    RussiaCarrier[4] = "Modified Kiev clas";
 
-    RussiaGuidedMissileCrusier[] = "";
-    RussiaGuidedMissileCrusier[] = "";
-    RussiaGuidedMissileCrusier[] = "";
-
-
-    RussiaGuidedMissileDestroyer[] = "",
-    RussiaGuidedMissileDestroyer[] = "",
-    RussiaGuidedMissileDestroyer[] = "",
+    RussiaGuidedMissileCrusier[1] = "Slava class";
+    RussiaGuidedMissileCrusier[2] = "Kirov class";
+    RussiaGuidedMissileCrusier[3] = "Kara class";
 
 
-    RussiaDestroyer[] = "";
-    RussiaDestroyer[] = "";
-    RussiaDestroyer[] = "";
+    RussiaGuidedMissileDestroyer[1] = "Udaloy class",
+    RussiaGuidedMissileDestroyer[2] = "Sovremennyy class",
+    RussiaGuidedMissileDestroyer[4] = "Kashin class",
 
-    RussiaGuidedMissileFrigate[] = "";
-    RussiaGuidedMissileFrigate[] = "";
-    RussiaGuidedMissileFrigate[] = "";
+
+    // RussiaDestroyer[] = "";
+    // RussiaDestroyer[] = "";
+    // RussiaDestroyer[] = "";
+
+    RussiaGuidedMissileFrigate[1] = "Krivak I class";
+    RussiaGuidedMissileFrigate[2] = "Krivak II class";
+    RussiaGuidedMissileFrigate[4] = "Neustrashimy class";
 
   }
 
-  object::DIS_EntityType_Variables DIS_enum::getDISEntityType(std::string kind, std::string domain,
+  DIS_EntityType_Variables DIS_enum::getDISEntityType(std::string kind, std::string domain,
                                                               std::string country, std::string category,
                                                               std::string subcategory,  std::string specific,
                                                               std::string extra){
-    object::DIS_EntityType_Variables help;
+    DIS_EntityType_Variables help;
 
 
     for (std::map<int,std::string>::iterator it=Kind.begin(); it!=Kind.end(); ++it)
@@ -214,8 +212,9 @@ namespace Model {
                       switch (help.Category) {
                         case 1 : //tank
                           for (std::map<int,std::string>::iterator it=GermanLandTankSubcategory.begin(); it!=GermanLandTankSubcategory.end(); ++it){
-                              if (it->second == category) {
+                              if (it->second == subcategory) {
                                 help.SubCategory =  it->first;
+                                // std::cout << help.SubCategory << '\n';
                               }
                             }
                         break;
@@ -238,7 +237,7 @@ namespace Model {
                       switch (help.Category) {
                         case 1 : //tank
                           for (std::map<int,std::string>::iterator it=USLandTankSubcategory.begin(); it!=USLandTankSubcategory.end(); ++it){
-                              if (it->second == category) {
+                              if (it->second == subcategory) {
                                 help.SubCategory =  it->first;
                               }
                             }
@@ -261,7 +260,7 @@ namespace Model {
                       switch (help.Category) {
                         case 1 : //tank
                           for (std::map<int,std::string>::iterator it=USLandTankSubcategory.begin(); it!=USLandTankSubcategory.end(); ++it){
-                              if (it->second == category) {
+                              if (it->second == subcategory) {
                                 help.SubCategory =  it->first;
                               }
                             }
@@ -277,6 +276,9 @@ namespace Model {
 
                     // more countries
                   break;
+                  default:
+                  std::cout << "invalid Country" << '\n';
+                  std::cout << "Possible is: 'Germany' 'USA' or 'Russia'" << '\n';
                 }
             break;
 
@@ -295,46 +297,57 @@ namespace Model {
                     for (std::map<int,std::string>::iterator it=CategorySurface.begin(); it!=CategorySurface.end(); ++it){
                         if (it->second == category) {
                           help.Category =  it->first;
-                        }
-                      }
-                      switch (help.Category) {
-                        case 1 : //Carrier
 
-                        break;
+                          switch (help.Category) {
+                            case 1 : //Carrier
 
-                        case 2 : //Command Ship/Cruiser
+                            break;
 
-                        break;
+                            case 2 : //Command Ship/Cruiser
 
-                        case 3 ://Guided Missile Cruiser
+                            break;
 
-                        break;
-
-                        case 4: //Guided Missile Destroyer (DDG)
-                        break;
-
-                        case 5://Destroyer
-                        break;
-
-                        case 6://Guided Missile Frigate (FFG)
-                          for (std::map<int,std::string>::iterator it=GermanGuidedMissileFrigate.begin(); it!=GermanGuidedMissileFrigate.end(); ++it){
-                              if (it->second == category) {
+                            case 3 ://Guided Missile Cruiser GermanGuidedMissileFrigate
+                            for (std::map<int,std::string>::iterator it=GermanGuidedMissileFrigate.begin(); it!=GermanGuidedMissileFrigate.end(); ++it){
+                              if (it->second == subcategory) {
                                 help.SubCategory =  it->first;
                               }
                             }
-                        break;
+                            break;
+
+                            case 4: //Guided Missile Destroyer (DDG)
+                            break;
+
+                            case 5://Destroyer
+                            break;
+
+                            case 6://Guided Missile Frigate (FFG)
+                            for (std::map<int,std::string>::iterator it=GermanGuidedMissileFrigate.begin(); it!=GermanGuidedMissileFrigate.end(); ++it){
+                              if (it->second == subcategory) {
+                                help.SubCategory =  it->first;
+                                std::cout << help.SubCategory << '\n';
+                              }
+                            }
+                            break;
+                          }
+                        }
                       }
                   break;
 
                   case 225: //usa
-                  for (std::map<int,std::string>::iterator it=CategorySurface.begin(); it!=CategorySurface.end(); ++it){
-                      if (it->second == category) {
-                        help.Category =  it->first;
+                    for (std::map<int,std::string>::iterator it=CategorySurface.begin(); it!=CategorySurface.end(); ++it){
+                        if (it->second == category) {
+                          help.Category =  it->first;
+                        }
                       }
-                    }
                     switch (help.Category) {
-                      case 1 : //Carrier
 
+                      case 1 : //Carrier
+                        for (std::map<int,std::string>::iterator it=USCarrier.begin(); it!=USCarrier.end(); ++it){
+                            if (it->second == subcategory) {
+                              help.SubCategory =  it->first;
+                            }
+                        }
                       break;
 
                       case 2 : //Command Ship/Cruiser
@@ -342,18 +355,32 @@ namespace Model {
                       break;
 
                       case 3 ://Guided Missile Cruiser
-
+                        for (std::map<int,std::string>::iterator it=USGuidedMissileCrusier.begin(); it!=USGuidedMissileCrusier.end(); ++it){
+                            if (it->second == subcategory) {
+                              help.SubCategory =  it->first;
+                            }
+                          }
                       break;
 
                       case 4: //Guided Missile Destroyer (DDG)
+                        for (std::map<int,std::string>::iterator it=USDestroyer.begin(); it!=USDestroyer.end(); ++it){
+                            if (it->second == subcategory) {
+                              help.SubCategory =  it->first;
+                            }
+                          }
                       break;
 
                       case 5://Destroyer
+                        for (std::map<int,std::string>::iterator it=USDestroyer.begin(); it!=USDestroyer.end(); ++it){
+                            if (it->second == subcategory) {
+                              help.SubCategory =  it->first;
+                            }
+                          }
                       break;
 
                       case 6://Guided Missile Frigate (FFG)
-                        for (std::map<int,std::string>::iterator it=GermanGuidedMissileFrigate.begin(); it!=GermanGuidedMissileFrigate.end(); ++it){
-                            if (it->second == category) {
+                        for (std::map<int,std::string>::iterator it=USGuidedMissileFrigate.begin(); it!=USGuidedMissileFrigate.end(); ++it){
+                            if (it->second == subcategory) {
                               help.SubCategory =  it->first;
                             }
                           }
@@ -361,14 +388,80 @@ namespace Model {
                     }
                   break;
                   case 222 : //russia
+                    for (std::map<int,std::string>::iterator it=CategorySurface.begin(); it!=CategorySurface.end(); ++it){
+                        if (it->second == category) {
+                          help.Category =  it->first;
+                        }
+                      }
+                  switch (help.Category) {
+
+                    case 1 : //Carrier
+                      for (std::map<int,std::string>::iterator it=RussiaCarrier.begin(); it!=RussiaCarrier.end(); ++it){
+                          if (it->second == subcategory) {
+                            help.SubCategory =  it->first;
+                          }
+                      }
+                    break;
+
+                    case 2 : //Command Ship/Cruiser
+
+                    break;
+
+                    case 3 ://Guided Missile Cruiser
+                      for (std::map<int,std::string>::iterator it=RussiaGuidedMissileCrusier.begin(); it!=RussiaGuidedMissileCrusier.end(); ++it){
+                          if (it->second == subcategory) {
+                            help.SubCategory =  it->first;
+                          }
+                        }
+                    break;
+
+                    case 4: //Guided Missile Destroyer (DDG)
+                      for (std::map<int,std::string>::iterator it=USDestroyer.begin(); it!=USDestroyer.end(); ++it){
+                          if (it->second == subcategory) {
+                            help.SubCategory =  it->first;
+                          }
+                        }
+                    break;
+
+                    case 5://Destroyer
+
+                    break;
+
+                    case 6://Guided Missile Frigate (FFG)
+                      for (std::map<int,std::string>::iterator it=RussiaGuidedMissileFrigate.begin(); it!=RussiaGuidedMissileFrigate.end(); ++it){
+                          if (it->second == subcategory) {
+                            help.SubCategory =  it->first;
+                          }
+                        }
+                    break;
+                  }
                   break;
 
+                  // more countries
 
 
-                    // more countries
+                  default:
+                  std::cout << "invalid Country" << '\n';
+                  std::cout << "Possible is: 'Germany' 'USA' or 'Russia'" << '\n';
+
+
 
                 }
             break;
+            default:
+            std::cout << "invalid Domain" << '\n';
+            std::cout << "Possible is: 'Land' or 'Surface' or 'Subsurface' or 'Air' or 'Space'  " << '\n';
+
+
+
+
+
+
+
+
+
+
+
 
             //more domains
 
@@ -378,18 +471,20 @@ namespace Model {
 
 
       break;
+      default : std::cout << "invalid Kind" << '\n';
+      std::cout << "Possible is: 'Other'  'Platform'  'Munition'  'Life form'  'Environmental'  'Cultural Feature'  'Supply'  'Radio'  'Expendable' or 'Sensor/Emitter' " << '\n';
     }
 
-    for (std::map<int,std::string>::iterator it=CategoryLand.begin(); it!=CategoryLand.end(); ++it){
-        if (it->second == category) {
-          help.Category =  it->first;
-        }
-      }
-    for (std::map<int,std::string>::iterator it=DomainPlatform.begin(); it!=DomainPlatform.end(); ++it)
-        if (it->second == category) {
-          help.Domain =  it->first;
-
-        }
+    // for (std::map<int,std::string>::iterator it=CategoryLand.begin(); it!=CategoryLand.end(); ++it){
+    //     if (it->second == category) {
+    //       help.Category =  it->first;
+    //     }
+    //   }
+    // for (std::map<int,std::string>::iterator it=DomainPlatform.begin(); it!=DomainPlatform.end(); ++it)
+    //     if (it->second == category) {
+    //       help.Domain =  it->first;
+    //
+    //     }
     return help;
   }
 
@@ -398,8 +493,25 @@ namespace Model {
         if (it->second == domain) {
           return it->first;
         }
+  return 99;
   }
 
+ // to do 
+  // std::string DIS_enum::checkContentType(std::string /*in*/ content){
+  //   for (std::map<int,std::string>::iterator it=GermanGuidedMissileFrigate.begin(); it!=GermanGuidedMissileFrigate.end(); ++it){
+  //       std::cout << it->second << '\n';
+  //       if (it->second == content) {
+  //         return "ture";
+  //       }
+  //       else {
+  //       if (it==GermanGuidedMissileFrigate.end()) {
+  //         return "ende";
+  //       }
+  //
+  //       }
+  //   }
+  //   return "end";
+  // }
 
 
 } // of namespace Model

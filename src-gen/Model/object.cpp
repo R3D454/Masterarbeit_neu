@@ -124,6 +124,12 @@ std::string object::getKind() {
 	return Kind;
 }
 
+void object::creatDIS_PDU(){
+// DISUnit.setProtocolVersion(6);
+
+
+}
+
 /**
  *
  * @param location
@@ -135,11 +141,16 @@ std::string object::getKind() {
 // void object::convertToDIS(undefined /*in*/location, undefined /*in*/orientation,
 // 		Equipment /*in*/equipment, int /*in*/category, int /*in*/subCategory) {
 // }
-	void object::setDIS_EntityType_Variables(int kind, int domain, int country, int category, int subCategory, int specific, int extra){
-	DIS_EntityType.Kind = kind;
+	void object::setDIS_EntityType_Variables(DIS_EntityType_Variables entitytype){
+	DIS_EntityType = entitytype;
 
 
 	}
+
+	DIS_EntityType_Variables object::getDIS_EntityType_Variables(){
+			return DIS_EntityType;
+	}
+
 } // of namespace Model
 
 /************************************************************

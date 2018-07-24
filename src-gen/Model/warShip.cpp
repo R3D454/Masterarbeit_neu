@@ -32,10 +32,23 @@ void warShip::addEquipment(Equipment /*in*/*eq)  {
  * @param Name
  * @param Typ
  */
-warShip::warShip(std::string /*in*/Name, std::string /*in*/Typ) {
+warShip::warShip(std::string /*in*/Name, std::string /*in*/Typ, std::string country) {
 object::setName(Name);
 driven::setType(Typ);
+if (Typ == "F124") {
+  driven::setCategory("Guided Missile Frigate (FFG)");
+  driven::setSubCategory("Sachsen Class (Type 124)");
+} else if (Typ == "F123") {
+  driven::setSubCategory("Brandenburg class (Type 123)");
+  driven::setCategory("Guided Missile Frigate (FFG)");
+
+}else if (Typ == "F122"){
+  driven::setSubCategory("Bremen class (Type 122)");
+  driven::setCategory("Guided Missile Frigate (FFG)");
+ }
+object::setCountry(country);
 object::setKind("Platform");
+object::SetDomain("Surface");
 equipment = NULL;
 
 }
@@ -58,7 +71,7 @@ void warShip::calcShoot() {
  * @return equipment
  */
 Equipment* warShip::getEquipment() {
-  
+
     return equipment;
 }
 

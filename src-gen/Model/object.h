@@ -15,8 +15,20 @@
 #include "EcorePrimitiveTypes/Pkg_EcorePrimitiveTypes.h"
 #include "string"
 #include "externeFunktionen/pos_convert.h"
+#include "externeFunktionen/structs.h"
 
 #include "DIS_enum.h"
+
+
+
+/************************************************************
+ DIS class header
+ ************************************************************/
+ #include <DIS/EntityStatePdu.h>
+
+
+
+
 
 namespace Model {
 class Equipment;
@@ -30,6 +42,7 @@ namespace Model {
  */
 class object {
 public:
+
 
 	/**
 	 *
@@ -59,7 +72,7 @@ public:
 	 *
 	 * @return
 	 */
-	std::string getCountry();
+	 std::string getCountry();
 
 	/**
 	 *
@@ -83,7 +96,7 @@ public:
 	 *
 	 * @return
 	 */
-	std::string getDomain();
+	 std::string getDomain();
 
 	/**
 	 *
@@ -101,42 +114,28 @@ public:
 	 *
 	 * @param value
 	 */
-	void setKind(std::string /*in*/k);
+	 void setKind(std::string /*in*/k);
 
 	/**
 	 *
 	 * @return value
 	 */
-	std::string getKind();
+	  std::string getKind();
 	/**
 	 *
 	 *
 	 */
 
 	 // virtual void  printInfo();
-	/**
-	 *
-	 * @param location
-	 * @param orientation
-	 * @param equipment
-	 * @param category
-	 * @param subCategory
-	 */
 
-	 struct DIS_EntityType_Variables{
-		 int Kind;
-		 int Domain;
-		 int Country;
-		 int Category;
-		 int SubCategory;
-		 int Sprecific;
-		 int Extra;
-	 };
-	// void convertToDIS(undefined /*in*/location, undefined /*in*/orientation,
-	// 		Equipment /*in*/equipment, int /*in*/category,
-	// 		int /*in*/subCategory);
 
-	void setDIS_EntityType_Variables(int kind, int domain, int country, int category, int subCategory, int specific, int extra);
+
+	 void creatDIS_PDU();
+
+
+	void setDIS_EntityType_Variables(DIS_EntityType_Variables entitytype);
+
+	DIS_EntityType_Variables getDIS_EntityType_Variables();
 
 private:
 	/**
@@ -162,9 +161,16 @@ private:
 	/**
 	 *
 	 */
-	std::string Kind;
-
+ 	std::string Kind;
+	/**
+	 *
+	 */
 	DIS_EntityType_Variables DIS_EntityType;
+	/**
+	 *
+	 */
+	DIS::EntityStatePdu DISUnit;
+
 };
 /************************************************************/
 /* External declarations (package visibility)               */

@@ -79,16 +79,18 @@ Vector3D driven::getOrientation() {
  *
  * @return
  */
-// std::string driven::getSubCategory() {
-// }
-//
-// /**
-//  *
-//  * @param name
-//  */
-// void driven::setSubCategory(std::string /*in*/name) {
-//
-// }
+std::string driven::getSubCategory() {
+  return SubCategory;
+}
+
+/**
+ *
+ * @param name
+ */
+void driven::setSubCategory(std::string /*in*/sub) {
+  SubCategory = sub;
+
+}
 
 /**
  *
@@ -110,28 +112,20 @@ void driven::printInfo(){
 
 }
 
- void driven::creatDIS_PDU() {
-   //entity Type
-   // std::string ki = driven::getkind();
-   enum kindValue {
-     Other = 0,
-     Platform = 1,
-     Munition = 2,
-     Life_form = 3,
-     Environmental = 4,
-     Cultural_feature = 5,
-     Supply = 6,
-     Radio = 7,
-     Expendalbe = 8,
-     Sensor_Emmiter = 9
-     };
+ void driven::creatDIS_PDU(std::string kind, std::string domain , std::string country , std::string category,  std::string subcategory) {
 
-     
+DIS_EntityType_Variables EntityType;
+Model::DIS_enum convert;
 
-   // std::string cat = driven::getCategory();
-   // std::string count = driven::getCountry();
-   // std::string dom = driven::getDomain();
-   // std::string typ = driven::getType();
+std::cout << kind<<domain<<country<<category<<subcategory << '\n';
+
+ EntityType =  convert.getDISEntityType(kind, domain ,country , category,  subcategory,  "todo",  "todo");
+
+ std::cout << EntityType.Kind<<" " << EntityType.Domain<<" " << EntityType.Country<<" " <<EntityType.Category<<" " <<EntityType.SubCategory <<'\n';
+
+object::setDIS_EntityType_Variables(EntityType);
+
+
 
  }
 

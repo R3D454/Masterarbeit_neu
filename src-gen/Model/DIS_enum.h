@@ -12,9 +12,10 @@
 #include "Model/Pkg_Model.h"
 
 #include "AnsiCLibrary/Pkg_AnsiCLibrary.h"
-#include "Model/object.h"
+#include "object.h"
 #include "string"
 #include <map>
+//
 
 namespace Model {
 
@@ -29,9 +30,11 @@ public:
   DIS_enum();
   // ~DIS_enum();
 
-   object::DIS_EntityType_Variables getDISEntityType(std::string kind, std::string domain, std::string country, std::string category,  std::string subcategory,  std::string specific,  std::string extra);
+  DIS_EntityType_Variables getDISEntityType(std::string kind, std::string domain, std::string country, std::string category,  std::string subcategory,  std::string specific,  std::string extra);
 
    int getDISDomain(std::string domain);
+
+   //std::string checkContentType(std::string /*in*/ content);
 
 private:
   std::map<int,std::string> Kind;

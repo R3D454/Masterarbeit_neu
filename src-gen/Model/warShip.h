@@ -39,7 +39,7 @@ public:
 	 * @param Name
 	 * @param Typ
 	 */
-	warShip(std::string /*in*/Name, std::string /*in*/Typ);
+	warShip(std::string /*in*/Name, std::string /*in*/Typ, std::string country);
 
 	/**
 	 *

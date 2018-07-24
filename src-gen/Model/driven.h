@@ -34,8 +34,19 @@ public:
 	 *
 	 * @param name
 	 */
-	void setCategory(std::string /*in*/name);
+	void setCategory(std::string /*in*/cat);
 
+	/**
+	 *
+	 * @return
+	 */
+	std::string getSubCategory();
+
+	/**
+	 *
+	 * @param name
+	 */
+	void setSubCategory(std::string /*in*/sub);
 	/**
 	 *
 	 */
@@ -65,18 +76,7 @@ public:
 	 */
 	Vector3D getOrientation();
 
-	/**
-	 *
-	 * @return
-	 */
-	// std::string getSubCategory();
-	//
-	// /**
-	//  *
-	//  * @param name
-	//  */
-	// void setSubCategory(std::string /*in*/name);
-
+	
 	/**
 	 *
 	 * @param type
@@ -95,7 +95,7 @@ public:
 	 */
 	 virtual void printInfo();
 
-	 void creatDIS_PDU();
+	 void creatDIS_PDU(std::string kind, std::string domain , std::string country , std::string category,  std::string subcategory);
 
 protected:
 
@@ -125,7 +125,7 @@ private:
 	/**
 	 *
 	 */
-	int subCategory;
+	std::string SubCategory;
 };
 /************************************************************/
 /* External declarations (package visibility)               */
