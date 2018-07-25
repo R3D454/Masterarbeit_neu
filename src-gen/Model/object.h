@@ -14,18 +14,34 @@
 #include "AnsiCLibrary/Pkg_AnsiCLibrary.h"
 #include "EcorePrimitiveTypes/Pkg_EcorePrimitiveTypes.h"
 #include "string"
-#include "externeFunktionen/pos_convert.h"
-#include "externeFunktionen/structs.h"
 
-#include "DIS_enum.h"
-
+/************************************************************
+ functions
+ ************************************************************/
+ #include "externeFunktionen/pos_convert.h"
+ #include "externeFunktionen/structs.h"
+ #include "externeFunktionen/send_recv_data.h"
 
 
 /************************************************************
  DIS class header
  ************************************************************/
  #include <DIS/EntityStatePdu.h>
+ #include "DIS/Vector3Double.h"
 
+
+ /************************************************************
+  GeographicLib class header
+  ************************************************************/
+  #include <GeographicLib/Constants.hpp>
+  #include <GeographicLib/Geocentric.hpp>
+  #include <GeographicLib/Geodesic.hpp>
+
+  #include "DIS_enum.h"
+  using namespace GeographicLib;
+
+// Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
+// Geodesic geod(Constants::WGS84_a(), Constants::WGS84_f());
 
 
 
@@ -41,6 +57,14 @@ namespace Model {
  *
  */
 class object {
+
+protected:
+  /**
+   * creat DIS pdu
+   *
+   */
+  void makeStdDISPDU(DIS::Vector3Float velo,DIS::Orientation orie);
+
 public:
 
 
@@ -127,16 +151,36 @@ public:
 	 */
 
 	 // virtual void  printInfo();
-
-
-
-	 void creatDIS_PDU();
-
-
-	void setDIS_EntityType_Variables(DIS_EntityType_Variables entitytype);
-
-	DIS_EntityType_Variables getDIS_EntityType_Variables();
-
+   // /**
+   //  * creat DIS pdu
+   //  *
+   //  */
+	 // void creatDIS_PDU();
+   /**
+    *
+    * @ param struct DIS_EntityType_Variables
+    */
+   void setDIS_EntityType_Variables(DIS_EntityType_Variables entitytype);
+   /**
+    *
+    *@return struct DIS_EntityType_Variables
+    */
+   DIS_EntityType_Variables getDIS_EntityType_Variables();
+   /**
+    *
+    * @ param positionXYZ
+    */
+   void setPositionXYZ(Vector3D positionXYZ);
+   /**
+    *
+    *@return positionXYZ
+    */
+   Vector3D getPositionXYZ();
+   /**
+    *
+    *@
+    */
+    void sendToNetwork();
 private:
 	/**
 	 *
@@ -161,6 +205,10 @@ private:
 	/**
 	 *
 	 */
+  Vector3D PositionXYZ;
+   /**
+ 	 *
+ 	 */
  	std::string Kind;
 	/**
 	 *

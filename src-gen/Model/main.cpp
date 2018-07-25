@@ -5,9 +5,11 @@
 #include "rocket.h"
 #include "vls.h"
 #include "weapon.h"
-#include "object.h"
+//#include "object.h"
 
 
+// Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
+Geodesic geod(Constants::WGS84_a(), Constants::WGS84_f());
 
 // #include "externeFunktionen/pos_convert.h"
 
@@ -39,16 +41,20 @@ ship1.printInfo();
 ship1.getEquipment()->printInfo();
 std::cout << ship1.getSubCategory() << '\n';
 
-ship1.creatDIS_PDU(ship1.getKind(),ship1.getDomain(),ship1.getCountry(),ship1.getCategory(), ship1.getSubCategory());
+ship1.getDIS_PDUType(ship1.getKind(),ship1.getDomain(),ship1.getCountry(),ship1.getCategory(), ship1.getSubCategory());
 
 disb = ship1.getDIS_EntityType_Variables();
 std::cout << disb.Kind<<" " << disb.Domain<<" " << disb.Country<<" " <<disb.Category<<" " <<disb.SubCategory <<'\n';
 
 // std::cout << disa.checkContentType(ship1.getSubCategory()) << '\n';
 
-
+ship1.createDISPDU();
+ship1.sendToNetwork();
  DIS::DataStream buffer( DIS::BIG );
  DIS::EntityStatePdu n1;
+
+ DIS::ArticulationParameter equipment[5];
+ equipment[1].setPartAttachedTo(0);
 
 
   return 0;

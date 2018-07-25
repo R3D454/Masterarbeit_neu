@@ -76,7 +76,7 @@ public:
 	 */
 	Vector3D getOrientation();
 
-	
+
 	/**
 	 *
 	 * @param type
@@ -94,9 +94,16 @@ public:
 	 *
 	 */
 	 virtual void printInfo();
-
-	 void creatDIS_PDU(std::string kind, std::string domain , std::string country , std::string category,  std::string subcategory);
-
+	 /**
+ 	 *
+ 	 *
+ 	 */
+	 void getDIS_PDUType(std::string kind, std::string domain , std::string country , std::string category,  std::string subcategory);
+	 /**
+ 	 *
+ 	 *
+	 */
+	 void createDISPDU();
 protected:
 
 	/**

@@ -8,15 +8,21 @@
  object class body
  ************************************************************/
 
+
 // include associated header file
 #include "Model/object.h"
 
 // Derived includes directives
 #include "Model/Equipment.h"
 
-namespace Model {
+#define PORT 3000
+#define DST "127.0.0.255"
+#define BUFSIZE 500
 
+
+namespace Model {
 // static attributes (if any)
+Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
 
 /**
  *
@@ -94,10 +100,13 @@ std::string object::getDomain() {
  * @param pos
  */
 void object::setPosition(double lat,double lon,double height) {
+
 Position.lat = lat;
 Position.lon = lon;
 Position.height_above_geoid = height;
-
+Vector3D local_positionXYZ;
+earth.Forward(Position.lat, Position.lon, Position.height_above_geoid, local_positionXYZ.x, local_positionXYZ.y, local_positionXYZ.z);
+object::setPositionXYZ(local_positionXYZ);
 }
 
 /**
@@ -124,10 +133,36 @@ std::string object::getKind() {
 	return Kind;
 }
 
-void object::creatDIS_PDU(){
+void object::makeStdDISPDU(DIS::Vector3Float velo,DIS::Orientation orie){
 DISUnit.setProtocolVersion(6);
+DISUnit.setExerciseID(0);
 
+DIS::EntityID DISunit_entity_id;
+DISunit_entity_id.setSite( 0 );
+DISunit_entity_id.setApplication( 1 );
+DISunit_entity_id.setEntity( 1 );
 
+DISUnit.setEntityID(DISunit_entity_id);
+
+DIS::EntityType DISType;
+DISType.setEntityKind(DIS_EntityType.Kind);
+DISType.setDomain(DIS_EntityType.Domain);
+DISType.setCountry(DIS_EntityType.Country);
+DISType.setCategory(DIS_EntityType.Category);
+DISType.setSubcategory(DIS_EntityType.SubCategory);
+DISType.setSpecific(0);
+DISType.setExtra(0);
+
+DISUnit.setEntityType(DISType);
+
+DIS::Vector3Double DISPosition;
+DISPosition.setX(PositionXYZ.x);
+DISPosition.setY(PositionXYZ.y);
+DISPosition.setZ(PositionXYZ.z);
+
+DISUnit.setEntityLocation(DISPosition);
+DISUnit.setEntityLinearVelocity(velo);
+DISUnit.setEntityOrientation(orie);
 }
 
 /**
@@ -143,13 +178,33 @@ DISUnit.setProtocolVersion(6);
 // }
 	void object::setDIS_EntityType_Variables(DIS_EntityType_Variables entitytype){
 	DIS_EntityType = entitytype;
-
-
 	}
 
 	DIS_EntityType_Variables object::getDIS_EntityType_Variables(){
 			return DIS_EntityType;
 	}
+
+	void object::setPositionXYZ(Vector3D positionXYZ){
+		PositionXYZ = positionXYZ;
+	}
+
+	Vector3D object::getPositionXYZ(){
+  	return PositionXYZ;
+	}
+
+	void object::sendToNetwork(){
+		DIS::DataStream buffer( DIS::BIG );
+		char buf[BUFSIZE];
+
+		DISUnit.marshal(buffer);
+		memset(buf,0,BUFSIZE);
+		memcpy(buf,&buffer[0],buffer.size());
+		send_data( buf, buffer.size(), DST, PORT );
+		buffer.clear();
+
+	}
+
+
 
 } // of namespace Model
 

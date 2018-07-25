@@ -112,7 +112,7 @@ void driven::printInfo(){
 
 }
 
- void driven::creatDIS_PDU(std::string kind, std::string domain , std::string country , std::string category,  std::string subcategory) {
+ void driven::getDIS_PDUType(std::string kind, std::string domain , std::string country , std::string category,  std::string subcategory) {
 
 DIS_EntityType_Variables EntityType;
 Model::DIS_enum convert;
@@ -128,6 +128,21 @@ object::setDIS_EntityType_Variables(EntityType);
 
 
  }
+
+ void driven::createDISPDU(){
+   driven::getDIS_PDUType(object::getKind(), object::getDomain() , object::getCountry() , Category,  SubCategory);
+   DIS::Vector3Float velo;
+   velo.setX(Velocity.x);
+   velo.setY(Velocity.y);
+   velo.setZ(Velocity.z);
+   DIS::Orientation orie;
+   orie.setTheta(Orientation.x);
+   orie.setPsi(Orientation.y);
+   orie.setPhi(Orientation.z);
+   object::makeStdDISPDU(velo, orie);
+
+ }
+
 
 } // of namespace Model
 

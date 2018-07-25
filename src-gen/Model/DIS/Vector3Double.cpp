@@ -1,55 +1,85 @@
-#ifndef VECTOR3DOUBLE_H
-#define VECTOR3DOUBLE_H
+#include <DIS/Vector3Double.h> 
 
-#include <DIS/DataStream.h>
-#include <DIS/msLibMacro.h>
+using namespace DIS;
 
 
-namespace DIS
+Vector3Double::Vector3Double():
+   _x(0.0),
+   _y(0.0),
+   _z(0.0)
 {
-// Section 5.3.34. Three double precision floating point values, x, y, and z
-
-// Copyright (c) 2007-2009, MOVES Institute, Naval Postgraduate School. All rights reserved.
-//
-// @author DMcG, jkg
-
-class EXPORT_MACRO Vector3Double
-{
-protected:
-  /** X value */
-  double _x;
-
-  /** Y value */
-  double _y;
-
-  /** Z value */
-  double _z;
-
-
- public:
-    Vector3Double();
-    virtual ~Vector3Double();
-
-    virtual void marshal(DataStream& dataStream) const;
-    virtual void unmarshal(DataStream& dataStream);
-
-    double getX() const;
-    void setX(double pX);
-
-    double getY() const;
-    void setY(double pX);
-
-    double getZ() const;
-    void setZ(double pX);
-
-
-virtual int getMarshalledSize() const;
-
-     bool operator  ==(const Vector3Double& rhs) const;
-};
 }
 
-#endif
+Vector3Double::~Vector3Double()
+{
+}
+
+double Vector3Double::getX() const
+{
+    return _x;
+}
+
+void Vector3Double::setX(double pX)
+{
+    _x = pX;
+}
+
+double Vector3Double::getY() const
+{
+    return _y;
+}
+
+void Vector3Double::setY(double pX)
+{
+    _y = pX;
+}
+
+double Vector3Double::getZ() const
+{
+    return _z;
+}
+
+void Vector3Double::setZ(double pX)
+{
+    _z = pX;
+}
+
+void Vector3Double::marshal(DataStream& dataStream) const
+{
+    dataStream << _x;
+    dataStream << _y;
+    dataStream << _z;
+}
+
+void Vector3Double::unmarshal(DataStream& dataStream)
+{
+    dataStream >> _x;
+    dataStream >> _y;
+    dataStream >> _z;
+}
+
+
+bool Vector3Double::operator ==(const Vector3Double& rhs) const
+ {
+     bool ivarsEqual = true;
+
+     if( ! (_x == rhs._x) ) ivarsEqual = false;
+     if( ! (_y == rhs._y) ) ivarsEqual = false;
+     if( ! (_z == rhs._z) ) ivarsEqual = false;
+
+    return ivarsEqual;
+ }
+
+int Vector3Double::getMarshalledSize() const
+{
+   int marshalSize = 0;
+
+   marshalSize = marshalSize + 8;  // _x
+   marshalSize = marshalSize + 8;  // _y
+   marshalSize = marshalSize + 8;  // _z
+    return marshalSize;
+}
+
 // Copyright (c) 1995-2009 held by the author(s).  All rights reserved.
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions
