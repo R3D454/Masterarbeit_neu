@@ -11,3 +11,8 @@ struct DIS_EntityType_Variables{
   int Sprecific;
   int Extra;
 };
+
+// struct gunValues{
+//   double Orientation;
+//   double Elevation;
+// };

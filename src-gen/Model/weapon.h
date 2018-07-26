@@ -12,7 +12,10 @@
 #include "Model/Pkg_Model.h"
 
 #include "string"
-
+struct gunValues{
+  double Orientation;
+  double Elevation;
+};
 namespace Model {
 
 /************************************************************/
@@ -48,6 +51,16 @@ public:
 	 *
 	 */
 	virtual void printInfo();
+	/**
+	 *
+	 * @param t
+	 */
+	void setGunValues(double orientation, double elevation);
+	/**
+	 *
+	 * @return type
+	 */
+	gunValues getGunValues();
 
 private:
 	/**
@@ -58,6 +71,11 @@ private:
 	 *
 	 */
 	std::string Type;
+	/**
+	 *
+	 */
+	 gunValues GunValues;
+
 };
 /************************************************************/
 /* External declarations (package visibility)               */

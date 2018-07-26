@@ -23,9 +23,9 @@ namespace Model {
  * @param cells
  * @param type
  */
-vls::vls(std::string /*in*/n, std::string /*in*/t, int /*in*/number) : numberOfCells(number) {
+vls::vls(std::string /*in*/n, int /*in*/number) : numberOfCells(number) {
 weapon::setName(n);
-weapon::setType(t);
+weapon::setType("VLS");
 }
 
 /**

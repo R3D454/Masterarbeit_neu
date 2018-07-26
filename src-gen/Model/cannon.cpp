@@ -23,11 +23,10 @@ namespace Model {
  * @param type
  * @param Caliber
  */
-cannon::cannon(std::string /*in*/name, std::string /*in*/type,
-		float /*in*/c)   {
+cannon::cannon(std::string /*in*/name, float /*in*/c)   {
 			Caliber = c;
 			weapon::setName(name);
-			weapon::setType(type);
+			weapon::setType("PRIMARY_TURRET");
 }
 
 /**

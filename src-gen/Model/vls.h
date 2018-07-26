@@ -31,7 +31,7 @@ public:
 	 * @param cells
 	 * @param type t
 	 */
-	vls(std::string /*in*/n, std::string /*in*/t, int /*in*/number);
+	vls(std::string /*in*/n, int /*in*/number);
 
 	/**
 	 *

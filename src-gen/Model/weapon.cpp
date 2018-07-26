@@ -44,8 +44,19 @@ return Type;
 }
 
 void weapon::printInfo(){
-  
+
 }
+
+void weapon::setGunValues(double orientation, double elevation){
+GunValues.Orientation = orientation;
+GunValues.Elevation = elevation;
+}
+
+gunValues weapon::getGunValues(){
+
+  return GunValues;
+}
+
 
 } // of namespace Model
 

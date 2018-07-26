@@ -24,6 +24,7 @@ namespace Model {
  */
 void warShip::addEquipment(Equipment /*in*/*eq)  {
   equipment = eq;
+  driven::setEquipment(eq);
 
 }
 
@@ -49,6 +50,7 @@ if (Typ == "F124") {
 object::setCountry(country);
 object::setKind("Platform");
 object::SetDomain("Surface");
+object::setPosition(0,0,0);
 equipment = NULL;
 
 }
@@ -80,6 +82,7 @@ void warShip::printInfo(){
   std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
 
 }
+
 
 } // of namespace Model
 

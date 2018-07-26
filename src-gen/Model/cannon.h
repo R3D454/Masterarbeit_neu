@@ -33,7 +33,7 @@ public:
 	 * @param type
 	 * @param Caliber
 	 */
-	cannon(std::string /*in*/name, std::string /*in*/type, float /*in*/c);
+	cannon(std::string /*in*/name, float /*in*/c);
 
 	/**
 	 *

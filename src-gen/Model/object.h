@@ -15,6 +15,9 @@
 #include "EcorePrimitiveTypes/Pkg_EcorePrimitiveTypes.h"
 #include "string"
 
+#include "Model/sensor.h"
+#include "Model/weapon.h"
+#include "Equipment.h"
 /************************************************************
  functions
  ************************************************************/
@@ -28,6 +31,7 @@
  ************************************************************/
  #include <DIS/EntityStatePdu.h>
  #include "DIS/Vector3Double.h"
+ #include "DIS/Conversion.h"
 
 
  /************************************************************
@@ -181,6 +185,11 @@ public:
     *@
     */
     void sendToNetwork();
+    /**
+     *
+     *@
+     */
+    virtual void makeDISArticulationsParameter();
 private:
 	/**
 	 *

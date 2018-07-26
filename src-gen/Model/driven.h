@@ -15,6 +15,7 @@
 #include "Model/object.h"
 #include "string"
 
+
 namespace Model {
 
 /************************************************************/
@@ -104,7 +105,23 @@ public:
  	 *
 	 */
 	 void createDISPDU();
+	 /**
+ 	 *
+ 	 *
+	 */
+	 void makeDISArticulationsParameter();
+
 protected:
+	/**
+	*
+	*
+	*/
+	void setEquipment(Equipment *eq);
+	/**
+	*
+	*
+	*/
+	Equipment* getEquipment();
 
 	/**
 	 *
@@ -133,6 +150,8 @@ private:
 	 *
 	 */
 	std::string SubCategory;
+
+	Equipment *equipment;
 };
 /************************************************************/
 /* External declarations (package visibility)               */

@@ -20,6 +20,7 @@
 #define BUFSIZE 500
 
 
+
 namespace Model {
 // static attributes (if any)
 Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
@@ -203,8 +204,8 @@ DISUnit.setEntityOrientation(orie);
 		buffer.clear();
 
 	}
-
-
+	void object::makeDISArticulationsParameter(){
+		}
 
 } // of namespace Model
 

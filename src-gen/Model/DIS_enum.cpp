@@ -325,7 +325,7 @@ namespace Model {
                             for (std::map<int,std::string>::iterator it=GermanGuidedMissileFrigate.begin(); it!=GermanGuidedMissileFrigate.end(); ++it){
                               if (it->second == subcategory) {
                                 help.SubCategory =  it->first;
-                                std::cout << help.SubCategory << '\n';
+                                // std::cout << help.SubCategory << '\n';
                               }
                             }
                             break;
@@ -496,7 +496,7 @@ namespace Model {
   return 99;
   }
 
- // to do 
+ // to do
   // std::string DIS_enum::checkContentType(std::string /*in*/ content){
   //   for (std::map<int,std::string>::iterator it=GermanGuidedMissileFrigate.begin(); it!=GermanGuidedMissileFrigate.end(); ++it){
   //       std::cout << it->second << '\n';
