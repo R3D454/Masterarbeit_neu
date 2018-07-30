@@ -19,39 +19,56 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
+ *
  */
 void military::calcShoot() {
 }
 
 /**
- * 
- * @param Name 
+ *
+ * @param Name
  */
-void military::addEquipment(Equipment /*in*/Name) {
+void military::addEquipment(Equipment /*in*/*eq) {
+  equipment = eq;
+  driven::setEquipment(eq);
 }
 
 /**
- * 
+ *
  */
 void military::rmEquipment() {
+  equipment = NULL;
+
 }
 
 /**
- * 
- * @param Name 
- * @param Type 
+ *
+ * @param Name
+ * @param Type
  */
-military::military(std::string /*in*/Name, std::string /*in*/Type) {
+military::military(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country) {
+  object::setName(Name);
+  driven::setType(Type);
+  object::setCountry(country);
+  object::setKind("Platform");
+  object::SetDomain("Land");
+  object::setPosition(0,0,0);
+
 }
 
 /**
- * 
- * @return equipment 
+ *
+ * @return equipment
  */
-Equipment military::getEquipment() {
+Equipment* military::getEquipment() {
+  return equipment;
 }
+void military::printInfo(){
+  std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
 
+  equipment->printInfo();
+
+}
 } // of namespace Model
 
 /************************************************************

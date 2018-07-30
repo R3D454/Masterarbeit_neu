@@ -224,6 +224,9 @@ namespace Model {
                         //Armored Utility Vehicle
                         case 3 :
                         break;
+                        default:
+                          std::cout << "invalid Category" << '\n';
+                        break;
                       }
                   break;
 
@@ -248,6 +251,9 @@ namespace Model {
                         //Armored Utility Vehicle
                         case 3 :
                         break;
+                        default:
+                          std::cout << "invalid Category" << '\n';
+                        break;
                       }
                     break;
                   case 222 : //russia
@@ -270,6 +276,9 @@ namespace Model {
                         break;
                         //Armored Utility Vehicle
                         case 3 :
+                        break;
+                        default:
+                          std::cout << "invalid Category" << '\n';
                         break;
                       }
                     break;
@@ -312,6 +321,7 @@ namespace Model {
                               if (it->second == subcategory) {
                                 help.SubCategory =  it->first;
                               }
+
                             }
                             break;
 
@@ -327,7 +337,11 @@ namespace Model {
                                 help.SubCategory =  it->first;
                                 // std::cout << help.SubCategory << '\n';
                               }
+
                             }
+                            break;
+                            default:
+                              std::cout << "invalid Category" << '\n';
                             break;
                           }
                         }
@@ -385,6 +399,9 @@ namespace Model {
                             }
                           }
                       break;
+                      default:
+                        std::cout << "invalid Category" << '\n';
+                      break;
                     }
                   break;
                   case 222 : //russia
@@ -433,6 +450,9 @@ namespace Model {
                             help.SubCategory =  it->first;
                           }
                         }
+                    break;
+                    default:
+                      std::cout << "invalid Category" << '\n';
                     break;
                   }
                   break;

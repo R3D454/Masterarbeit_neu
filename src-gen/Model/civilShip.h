@@ -12,6 +12,8 @@
 #include "Model/Pkg_Model.h"
 
 #include "Model/Surface.h"
+#include "Model/Equipment.h"
+
 #include "string"
 #include <list>
 namespace Model {
@@ -62,6 +64,8 @@ private:
 	 *
 	 */
 	 std::list<sensor*> sensorList;
+
+	 Equipment *equipment;
 };
 /************************************************************/
 /* External declarations (package visibility)               */

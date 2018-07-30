@@ -32,7 +32,7 @@ public:
 	 * @param Name
 	 * @param Typ
 	 */
-	civilPlane(std::string /*in*/n, std::string /*in*/t);
+	civilPlane(std::string /*in*/n, std::string /*in*/t,std::string/*in*/ country);
 
 	/**
 	 *
@@ -62,6 +62,8 @@ private:
 	 *
 	 */
 	 std::list<sensor*> sensorList;
+	 Equipment *equipment;
+
 };
 /************************************************************/
 /* External declarations (package visibility)               */

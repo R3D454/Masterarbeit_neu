@@ -22,9 +22,9 @@ namespace Model {
  * @param name
  * @param type
  */
-sonar::sonar(std::string /*in*/n, std::string /*in*/t) {
+sonar::sonar(std::string /*in*/n) {
   sensor::setName(n);
-	sensor::setType(t);
+	sensor::setType("SONAR");
 }
 
 /**

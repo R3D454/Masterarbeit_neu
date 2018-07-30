@@ -26,6 +26,7 @@ civilShip::civilShip(std::string /*in*/n, std::string /*in*/t) {
   object::setName(n);
 	driven::setType(t);
 	object::setKind("Platform");
+  equipment = NULL;
 }
 /**
  *
@@ -33,6 +34,15 @@ civilShip::civilShip(std::string /*in*/n, std::string /*in*/t) {
  */
 void civilShip::addSensor(sensor /*in*/*s) {
   sensorList.push_back(s);
+  if (equipment == NULL) {
+    equipment = new Model::Equipment("Alpha");
+    equipment->addSensor(s);
+
+  } else {
+    equipment->addSensor(s);
+  }
+  driven::setEquipment(equipment);
+
 
 }
 
@@ -41,6 +51,9 @@ void civilShip::addSensor(sensor /*in*/*s) {
  */
 void civilShip::rmSensor() {
   sensorList.clear();
+  equipment = NULL;
+  driven::setEquipment(NULL);
+
 
 }
 
@@ -51,12 +64,18 @@ void civilShip::rmSensor() {
  * @return sensors
  */
 std::list<sensor*> civilShip::getSensors() {
-  return sensorList;
+  if (equipment == NULL) {
+    return sensorList;
+
+  } else {
+  return  equipment->getSensor();
+  }
 
 }
 
 void civilShip::printInfo(){
   std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
+  equipment->printInfo();
 
 }
 } // of namespace Model

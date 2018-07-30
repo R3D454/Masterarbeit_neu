@@ -15,6 +15,7 @@
 #include "Model/rocket.h"
 #include "Model/weapon.h"
 #include "string"
+#include <list>
 
 namespace Model {
 
@@ -32,7 +33,6 @@ public:
 	 * @param type t
 	 */
 	vls(std::string /*in*/n, int /*in*/number);
-
 	/**
 	 *
 	 */
@@ -48,7 +48,7 @@ public:
 	 *
 	 * @param
 	 */
-	void rmRocket(rocket /*in*/null);
+	void rmRocket(rocket /*in*/*r);
 
 	/**
 	 *
@@ -59,7 +59,7 @@ public:
 	/**
 	 *
 	 */
-	void getNumberOfCells();
+	int getNumberOfCells();
 
 private:
 	/**

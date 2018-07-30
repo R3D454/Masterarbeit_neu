@@ -22,45 +22,51 @@ namespace Model {
 
 /************************************************************/
 /**
- * 
+ *
  */
 class military: public Land {
 public:
 
 	/**
-	 * 
+	 *
 	 */
 	void calcShoot();
 
 	/**
-	 * 
-	 * @param Name 
+	 *
+	 * @param Name
 	 */
-	void addEquipment(Equipment /*in*/Name);
+	void addEquipment(Equipment /*in*/*eq);
 
 	/**
-	 * 
+	 *
 	 */
 	void rmEquipment();
 
 	/**
-	 * 
-	 * @param Name 
-	 * @param Type 
+	 *
+	 * @param Name
+	 * @param Type
 	 */
-	military(std::string /*in*/Name, std::string /*in*/Type);
+	military(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country);
 
 	/**
-	 * 
-	 * @return equipment 
+	 *
+	 * @return equipment
 	 */
-	Equipment getEquipment();
+	Equipment* getEquipment();
+
+	/**
+	 *
+	 */
+	void printInfo();
+
 
 private:
 	/**
-	 * 
+	 *
 	 */
-	Equipment*& equipment;
+	Equipment *equipment;
 };
 /************************************************************/
 /* External declarations (package visibility)               */

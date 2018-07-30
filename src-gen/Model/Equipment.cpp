@@ -75,7 +75,8 @@ void Equipment::addSensor(sensor* /*in*/s) {
  *
  */
 void Equipment::printInfo() {
-  std::cout<< "Equipment Name:" <<Name <<std::endl;
+  std::cout<< "Equipment name:" <<Name <<std::endl;
+  std::cout << "Weapons are:" << '\n';
   if(!weaponList.empty()){
   	for(std::list<weapon*>::iterator it=weaponList.begin(); it != weaponList.end(); ++it)
   		{
@@ -84,7 +85,18 @@ void Equipment::printInfo() {
   		}
   }
   else {
-    std::cout << "list is empty" << '\n';
+    std::cout << "Weapon list is empty" << '\n';
+  }
+  std::cout << "Sensors are:" << '\n';
+  if(!sensorList.empty()){
+  	for(std::list<sensor*>::iterator it=sensorList.begin(); it != sensorList.end(); ++it)
+  		{
+  			(*it)->printInfo();
+  			//std::cout<<" "<<std::endl;
+  		}
+  }
+  else {
+    std::cout << "Sensor list  is empty" << '\n';
   }
 }
 

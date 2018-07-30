@@ -28,7 +28,7 @@ public:
 	 * @param name
 	 * @param type
 	 */
-	sonar(std::string /*in*/n, std::string /*in*/t);
+	sonar(std::string /*in*/n);
 
 	/**
 	 *

@@ -14,6 +14,8 @@
 #include "Model/Surface.h"
 #include "string"
 #include "Model/Equipment.h"
+#include <istream>
+
 
 namespace Model {
 class Equipment;
@@ -39,7 +41,7 @@ public:
 	 * @param Name
 	 * @param Typ
 	 */
-	warShip(std::string /*in*/Name, std::string /*in*/Typ, std::string country);
+	warShip(std::string /*in*/Name, std::string /*in*/Type, std::string /*in*/country);
 
 	/**
 	 *

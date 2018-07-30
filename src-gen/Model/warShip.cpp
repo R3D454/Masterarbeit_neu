@@ -33,20 +33,30 @@ void warShip::addEquipment(Equipment /*in*/*eq)  {
  * @param Name
  * @param Typ
  */
-warShip::warShip(std::string /*in*/Name, std::string /*in*/Typ, std::string country) {
+warShip::warShip(std::string /*in*/Name, std::string /*in*/Type, std::string/*in*/ country) {
 object::setName(Name);
-driven::setType(Typ);
-if (Typ == "F124") {
+driven::setType(Type);
+if (Type== "F124") {
   driven::setCategory("Guided Missile Frigate (FFG)");
   driven::setSubCategory("Sachsen Class (Type 124)");
-} else if (Typ == "F123") {
+} else if (Type == "F123") {
   driven::setSubCategory("Brandenburg class (Type 123)");
   driven::setCategory("Guided Missile Frigate (FFG)");
 
-}else if (Typ == "F122"){
+}else if (Type == "F122"){
   driven::setSubCategory("Bremen class (Type 122)");
   driven::setCategory("Guided Missile Frigate (FFG)");
- }
+} else{
+    std::string SubCategory;
+    std::string Category;
+    std::cout <<"Category as written in DIS Enum:";
+    getline(std::cin, Category);
+    // std::cin >> Category;
+    std::cout << std::endl <<"SubCategory as written in DIS Enum:";
+      getline(std::cin, SubCategory);
+    driven::setSubCategory(SubCategory);
+    driven::setCategory(Category);
+}
 object::setCountry(country);
 object::setKind("Platform");
 object::SetDomain("Surface");
@@ -80,6 +90,8 @@ Equipment* warShip::getEquipment() {
 
 void warShip::printInfo(){
   std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
+
+  equipment->printInfo();
 
 }
 

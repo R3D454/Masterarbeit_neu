@@ -27,6 +27,7 @@ cannon::cannon(std::string /*in*/name, float /*in*/c)   {
 			Caliber = c;
 			weapon::setName(name);
 			weapon::setType("PRIMARY_TURRET");
+			weapon::setGunValues(0,1);
 }
 
 /**

@@ -17,7 +17,8 @@ namespace Articulation
       {
          AZIMUTH = 11,
          AZIMUTH_RATE = 12,
-         ELEVATION = 13
+         ELEVATION = 13,
+         POSITION = 1
       };
 
       enum Part
@@ -27,6 +28,7 @@ namespace Articulation
          SECONDARY_GUN = 6016,
 				 PRIMARY_LAUNCHER = 4736,
 				 PRIMARY_RADAR = 5376,
+         SECONDARY_RADAR = 6976
        };
 
       enum Designator
@@ -187,9 +189,12 @@ object::setDIS_EntityType_Variables(EntityType);
     int i = 0;
     int amountTurrents = 0;
     int amountLauncher = 0;
+    int amountRadars = 0;
+    int amountSonar = 0;
+
    for(std::list<Model::weapon*>::iterator it=weapon.begin(); it != weapon.end(); it++)
      {
-       std::cout << (*it)->getType() << '\n';
+       // std::cout << (*it)->getType() << '\n';
         if((*it)->getType()=="PRIMARY_TURRET"){
           DIS::ArticulationParameter DISequipment[3];
           DISequipment[1].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET+amountTurrents*32,Articulation::AZIMUTH));
@@ -204,27 +209,65 @@ object::setDIS_EntityType_Variables(EntityType);
           DISequipment[2].setParameterValue((*it)->getGunValues().Orientation);
           paramList.push_back(DISequipment[2]);
 
-          DISequipment[3].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::ELEVATION));
-          DISequipment[3].setPartAttachedTo( 0 );
+          DISequipment[3].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_GUN,Articulation::ELEVATION));
+          DISequipment[3].setPartAttachedTo( 1 );
           DISequipment[3].setParameterTypeDesignator(Articulation::ARTICULATED );
-          DISequipment[3].setParameterValue((*it)->getGunValues().Elevation);
+          DISequipment[3].setParameterValue((double)(*it)->getGunValues().Elevation);
           paramList.push_back(DISequipment[3]);
-
+          amountTurrents++;
         } else if ((*it)->getType()=="VLS") {
           DIS::ArticulationParameter DISequipment;
           DISequipment.setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_LAUNCHER+amountLauncher*32,Articulation::AZIMUTH));
           DISequipment.setPartAttachedTo( 0 );
-          DISequipment.setParameterTypeDesignator(Articulation::ATTACHED );
+          DISequipment.setParameterTypeDesignator(Articulation::ARTICULATED );
           DISequipment.setParameterValue(0);
           paramList.push_back(DISequipment);
+          amountLauncher++;
         }
 
         }
+        for(std::list<Model::sensor*>::iterator it=sensor.begin(); it != sensor.end(); it++)
+          {
+            // std::cout << (*it)->getType() << '\n';
+             if((*it)->getType()=="RADAR"){
+               DIS::ArticulationParameter DISequipment[1];
+               DISequipment[1].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_RADAR+amountRadars*32,Articulation::POSITION));
+               DISequipment[1].setPartAttachedTo( 0 );
+               DISequipment[1].setParameterTypeDesignator(Articulation::ARTICULATED );
+               DISequipment[1].setParameterValue(0);
+               paramList.push_back(DISequipment[1]);
+
+               // DISequipment[2].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::AZIMUTH_RATE));
+               // DISequipment[2].setPartAttachedTo( 0 );
+               // DISequipment[2].setParameterTypeDesignator(Articulation::ARTICULATED );
+               // DISequipment[2].setParameterValue( 0 );
+               // paramList.push_back(DISequipment[2]);
+               //
+               // DISequipment[3].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::ELEVATION));
+               // DISequipment[3].setPartAttachedTo( 1 );
+               // DISequipment[3].setParameterTypeDesignator(Articulation::ARTICULATED );
+               // DISequipment[3].setParameterValue(0);
+               // paramList.push_back(DISequipment[3]);
+               amountRadars++;
+             } else if ((*it)->getType()=="SONAR") {
+               DIS::ArticulationParameter DISequipment;
+               DISequipment.setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::SECONDARY_RADAR+amountSonar*32,Articulation::POSITION));
+               DISequipment.setPartAttachedTo( 0 );
+               DISequipment.setParameterTypeDesignator(Articulation::ARTICULATED );
+               DISequipment.setParameterValue(0);
+               paramList.push_back(DISequipment);
+               amountSonar++;
+             }
+
+             }
+
+
         params.resize(paramList.size());
         for (std::list<DIS::ArticulationParameter> ::iterator it=paramList.begin(); it != paramList.end(); ++it){
           params[i] = *it;
           i++;
      }
+     object::addArticulationParameter(params);
  }
 
 } // of namespace Model

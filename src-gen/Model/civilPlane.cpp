@@ -15,14 +15,30 @@
 #include "Model/sensor.h"
 
 namespace Model {
+  // static attributes (if any)
 
-// static attributes (if any)
+  /**
+  *
+  * @param Name
+  * @param Typ
+  * @param Country
+  */
+  civilPlane::civilPlane(std::string /*in*/n, std::string /*in*/t,std::string/*in*/ country) {
+    object::setName(n);
+    driven::setType(t);
+    object::setKind("Platform");
+    object::setCountry(country);
+    object::SetDomain("Air");
+    object::setPosition(0,0,0);
+  }
 
 /**
  *
  */
 void civilPlane::rmSensor() {
   sensorList.clear();
+  equipment = NULL;
+  driven::setEquipment(NULL);
 }
 
 /**
@@ -31,29 +47,33 @@ void civilPlane::rmSensor() {
  */
 void civilPlane::addSensor(sensor /*in*/*s) {
   sensorList.push_back(s);
+  if (equipment == NULL) {
+    equipment = new Model::Equipment("Alpha");
+    equipment->addSensor(s);
+
+  } else {
+    equipment->addSensor(s);
+  }
+  driven::setEquipment(equipment);
 
 }
 
-/**
- *
- * @param Name
- * @param Typ
- */
-civilPlane::civilPlane(std::string /*in*/n, std::string /*in*/t) {
-object::setName(n);
-driven::setType(t);
-object::setKind("Platform");
-}
 
 /**
  *
  * @return sensors
  */
 std::list<sensor*> civilPlane::getSensors() {
-  return sensorList;
+  if (equipment == NULL) {
+    return sensorList;
+
+  } else {
+  return  equipment->getSensor();
+  }
 }
 void civilPlane::printInfo(){
 	  std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
+    equipment->printInfo();
 
 }
 } // of namespace Model

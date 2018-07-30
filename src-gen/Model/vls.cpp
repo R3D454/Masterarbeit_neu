@@ -34,13 +34,18 @@ weapon::setType("VLS");
 void vls::printInfo() {
 	std::cout<< "Name:" << weapon::getName()<< " Type:"<<weapon::getType()
 	<< " Number of cells:" << numberOfCells<<std::endl;
+	if(!rocketList.empty()){
 	std::cout<<"Rockets:" <<std::endl;
-
 	for(std::list<rocket*>::iterator it=rocketList.begin(); it != rocketList.end(); ++it)
 			{
 				(*it)->printInfo();
 				//std::cout<<" "<<std::endl;
 			}
+} else {
+	std::cout<<"no Rockets loaded:" <<std::endl;
+
+}
+
 }
 
 
@@ -74,7 +79,7 @@ void vls::setNumberOfCells(int /*in*/n) {
 /**
  *
  */
-void vls::getNumberOfCells() {
+int vls::getNumberOfCells() {
 	return numberOfCells;
 
 }

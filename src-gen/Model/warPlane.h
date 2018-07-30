@@ -22,43 +22,47 @@ namespace Model {
 
 /************************************************************/
 /**
- * 
+ *
  */
 class warPlane: public Air {
 public:
 
 	/**
-	 * 
-	 * @param Name 
-	 * @param Type 
+	 *
+	 * @param Name
+	 * @param Type
 	 */
-	warPlane(std::string /*in*/Name, std::string /*in*/Type);
+	warPlane(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country);
 
 	/**
-	 * 
+	 *
 	 */
 	void rmEquipment();
 
 	/**
-	 * 
-	 * @param Name 
+	 *
+	 * @param Name
 	 */
-	void addEquipment(Equipment /*in*/Name);
+	void addEquipment(Equipment /*in*/*eq);
 
 	/**
-	 * 
+	 *
 	 */
 	void calcShoot();
 
 	/**
-	 * 
-	 * @return equipment 
+	 *
+	 * @return equipment
 	 */
-	Equipment getEquipment();
+	Equipment* getEquipment();
+	/**
+	 *
+	 */
+	void printInfo();
 
 private:
 	/**
-	 * 
+	 *
 	 */
 	Equipment* equipment;
 };

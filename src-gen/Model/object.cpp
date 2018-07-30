@@ -204,8 +204,16 @@ DISUnit.setEntityOrientation(orie);
 		buffer.clear();
 
 	}
-	void object::makeDISArticulationsParameter(){
+
+	void object::addArticulationParameter(std::vector<DIS::ArticulationParameter> /*in */ params){
+		DISUnit.setArticulationParameters(params);
+
 		}
+
+		DIS::EntityStatePdu object::getDISPdu(){
+			return DISUnit;
+		}
+
 
 } // of namespace Model
 

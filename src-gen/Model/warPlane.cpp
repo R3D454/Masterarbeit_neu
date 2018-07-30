@@ -19,37 +19,54 @@ namespace Model {
 // static attributes (if any)
 
 /**
- * 
- * @param Name 
- * @param Type 
+ *
+ * @param Name
+ * @param Type
  */
-warPlane::warPlane(std::string /*in*/Name, std::string /*in*/Type) {
+warPlane::warPlane(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country) {
+object::setName(Name);
+driven::setType(Type);
+object::setCountry(country);
+object::setKind("Platform");
+object::SetDomain("Air");
+object::setPosition(0,0,0);
 }
 
 /**
- * 
+ *
  */
 void warPlane::rmEquipment() {
+  equipment = NULL;
 }
 
 /**
- * 
- * @param Name 
+ *
+ * @param Name
  */
-void warPlane::addEquipment(Equipment /*in*/Name) {
+void warPlane::addEquipment(Equipment /*in*/*eq) {
+  equipment = eq;
+  driven::setEquipment(eq);
 }
 
 /**
- * 
+ *
  */
 void warPlane::calcShoot() {
 }
 
 /**
- * 
- * @return equipment 
+ *
+ * @return equipment
  */
-Equipment warPlane::getEquipment() {
+Equipment* warPlane::getEquipment() {
+  return equipment;
+}
+
+void warPlane::printInfo(){
+  std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
+
+  equipment->printInfo();
+
 }
 
 } // of namespace Model

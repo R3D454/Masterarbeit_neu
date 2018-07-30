@@ -130,7 +130,7 @@ public:
 	 *
 	 * @param pos
 	 */
-	void setPosition(double lat,double lon,double hight);
+	void setPosition(double/*in */lat,double/*in */lon,double/*in */ hight);
 
 	/**
 	 *
@@ -164,7 +164,7 @@ public:
     *
     * @ param struct DIS_EntityType_Variables
     */
-   void setDIS_EntityType_Variables(DIS_EntityType_Variables entitytype);
+   void setDIS_EntityType_Variables(DIS_EntityType_Variables /*in *//*in */entitytype);
    /**
     *
     *@return struct DIS_EntityType_Variables
@@ -174,7 +174,7 @@ public:
     *
     * @ param positionXYZ
     */
-   void setPositionXYZ(Vector3D positionXYZ);
+   void setPositionXYZ(Vector3D /*in */positionXYZ);
    /**
     *
     *@return positionXYZ
@@ -185,11 +185,14 @@ public:
     *@
     */
     void sendToNetwork();
+
     /**
      *
      *@
      */
-    virtual void makeDISArticulationsParameter();
+    void addArticulationParameter(std::vector<DIS::ArticulationParameter> /*in */ params);
+
+    DIS::EntityStatePdu getDISPdu();
 private:
 	/**
 	 *

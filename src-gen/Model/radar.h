@@ -30,7 +30,7 @@ public:
 	 * @param range
 	 * @param name
 	 */
-	radar( std::string /*in*/n,std::string /*in*/t, float /*in*/r);
+	radar( std::string /*in*/n, float /*in*/r);
 
 	/**
 	 *

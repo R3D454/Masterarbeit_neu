@@ -23,9 +23,9 @@ namespace Model {
  * @param range
  * @param name
  */
-radar::radar(std::string /*in*/n,std::string /*in*/t, float /*in*/r) : Range(r) {
+radar::radar(std::string /*in*/n, float /*in*/r) : Range(r) {
 	sensor::setName(n);
-	sensor::setType(t);
+	sensor::setType("RADAR");
 }
 
 /**
