@@ -34,6 +34,13 @@ civilShip::civilShip(std::string /*in*/n, std::string /*in*/t) {
 
 civilShip::~civilShip(){
   object::decrementCounter();
+  if (object::getMembership() =="Friendly") {
+    object::decrementCounterFriendly();
+  } else if(object::getMembership() =="Enemy"){
+    object::decrementCounterEnemy();
+  }else if (object::getMembership() =="Neutral"){
+    object::decrementCounterNeutral();
+  }
 }
 /**
  *
@@ -81,7 +88,7 @@ std::list<sensor*> civilShip::getSensors() {
 }
 
 void civilShip::printInfo(){
-  std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
+  std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<" "<< object::getMembership()<<'\n';
   equipment->printInfo();
 
 }

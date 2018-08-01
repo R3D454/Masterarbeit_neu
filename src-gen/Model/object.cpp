@@ -24,6 +24,10 @@
 namespace Model {
 
 int object::Counter = 0;
+int object::CounterFriendly = 0;
+int object::CounterEnemy = 0;
+int object::CounterNeutral = 0;
+
 
 // static attributes (if any)
 Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
@@ -144,7 +148,22 @@ DISUnit.setExerciseID(0);
 DIS::EntityID DISunit_entity_id;
 DISunit_entity_id.setSite( 0 );
 DISunit_entity_id.setApplication( 1 );
-DISunit_entity_id.setEntity( object::getCounter() );
+
+if (Membership == "Other") {
+	DISunit_entity_id.setEntity( 0 );
+
+} else if(Membership == "Friendly") {
+
+	DISunit_entity_id.setEntity( (1 + CounterFriendly * 3)-3 );
+
+
+}else if(Membership == "Enemy"){
+	DISunit_entity_id.setEntity( (2 + CounterEnemy * 3)-3 );
+} else {
+	DISunit_entity_id.setEntity( (3 + CounterNeutral * 3)-3);
+
+}
+
 
 DISUnit.setEntityID(DISunit_entity_id);
 
@@ -227,6 +246,76 @@ DISUnit.setEntityOrientation(orie);
 			return Counter;
 		}
 
+		void object::incrementCounterFriendly(){
+			CounterFriendly++;
+		}
+		void object::decrementCounterFriendly(){
+			CounterFriendly--;
+		}
+		void object::incrementCounterEnemy(){
+			CounterEnemy++;
+		}
+		void object::decrementCounterEnemy(){
+			CounterEnemy--;
+		}
+		void object::incrementCounterNeutral(){
+			CounterNeutral++;
+		}
+		void object::decrementCounterNeutral(){
+			CounterNeutral--;
+
+		}
+		
+		std::string object::getMembership(){
+			return Membership;
+		}
+
+	  void object::setMembership(std::string membership){
+			if (membership =="Friendly" || membership =="Enemy"|| membership =="Neutral"|| membership =="Other") {
+				if (membership =="Friendly") {
+					Membership = membership;
+					CounterFriendly++;
+				} else if(membership =="Enemy"){
+					Membership = membership;
+					CounterEnemy++;
+				}else if (membership =="Neutral"){
+					Membership = membership;
+					CounterNeutral++;
+				} else  {
+					Membership = membership;
+				}
+
+			} else {
+				std::cout << "Membership can only be 'Enemy','Friendly' or 'Neutral'" << '\n';
+				std::cout << "Friendly = 1" << '\n';
+				std::cout << "Enemy = 2" << '\n';
+				std::cout << "Neutral = 3" << '\n';
+				std::cout << "Other = 4" << '\n';
+
+
+				int mem;
+				std::cin >> mem;
+
+				switch (mem) {
+					case 1: Membership = "Friendly";
+					CounterFriendly++;
+					break;
+					case 2:	Membership = "Enemy";
+					CounterEnemy++;
+
+					break;
+					case 3:	Membership = "Neutral";
+					CounterNeutral++;
+
+					break;
+					case 4:	Membership = "Other";
+					break;
+					default:	std::cout << "false input" << '\n';
+					break;
+				}
+			}
+
+		}
 
 
 } // of namespace Model

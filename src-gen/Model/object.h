@@ -14,6 +14,10 @@
 #include "AnsiCLibrary/Pkg_AnsiCLibrary.h"
 #include "EcorePrimitiveTypes/Pkg_EcorePrimitiveTypes.h"
 #include "string"
+#include <ostream>  // <<
+#include <istream>  // >>
+
+
 
 #include "Model/sensor.h"
 #include "Model/weapon.h"
@@ -68,6 +72,46 @@ protected:
    *
    */
   void makeStdDISPDU(DIS::Vector3Float velo,DIS::Orientation orie);
+  /**
+  *
+  *counter ++
+  */
+  void incrementCounter();
+  /**
+  *
+  * counter --
+  */
+  void decrementCounter();
+  /**
+  *
+  *counter ++
+  */
+  void incrementCounterFriendly();
+  /**
+  *
+  * counter --
+  */
+  void decrementCounterFriendly();
+  /**
+  *
+  *counter ++
+  */
+  void incrementCounterEnemy();
+  /**
+  *
+  * counter --
+  */
+  void decrementCounterEnemy();
+  /**
+  *
+  *counter ++
+  */
+  void incrementCounterNeutral();
+  /**
+  *
+  * counter --
+  */
+  void decrementCounterNeutral();
 
 public:
 
@@ -188,15 +232,32 @@ public:
 
     /**
      *
-     *@
+     *@param ArticulationParameter
      */
     void addArticulationParameter(std::vector<DIS::ArticulationParameter> /*in */ params);
-
+    /**
+     *
+     *@return DIS EntityStatePdu
+     */
     DIS::EntityStatePdu getDISPdu();
-
-    void incrementCounter();
-    void decrementCounter();
+    /**
+     *
+     *@return Counter
+     */
     int getCounter();
+    /**
+     *
+     *@return Membership
+     */
+    std::string getMembership();
+    /**
+     *
+     *@param membeship (enemy or friendly)
+     */
+     void setMembership(std::string membership);
+
+
+    // int getIDNumber();
 
 private:
 	/**
@@ -236,9 +297,25 @@ private:
 	 */
 	DIS::EntityStatePdu DISUnit;
   /**
+  *
+  */
+  std::string Membership;
+  /**
    *
    */
   static int Counter;
+  /**
+   *
+   */
+  static int CounterFriendly;
+  /**
+   *
+   */
+  static int CounterEnemy;
+  /**
+   *
+   */
+  static int CounterNeutral;
 
 };
 /************************************************************/

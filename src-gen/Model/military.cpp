@@ -53,6 +53,13 @@ military::military(std::string /*in*/Name, std::string /*in*/Type,std::string /*
 
 military::~military(){
   object::decrementCounter();
+  if (object::getMembership() =="Friendly") {
+    object::decrementCounterFriendly();
+  } else if(object::getMembership() =="Enemy"){
+    object::decrementCounterEnemy();
+  }else if (object::getMembership() =="Neutral"){
+    object::decrementCounterNeutral();
+  }
 }
 /**
  *
@@ -91,7 +98,7 @@ Equipment* military::getEquipment() {
   return equipment;
 }
 void military::printInfo(){
-  std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<'\n';
+  std::cout << "Name:" << object::getName() <<" "<< "Typ:" << driven::getType() <<" "<< object::getMembership()<<'\n';
 
   equipment->printInfo();
 
