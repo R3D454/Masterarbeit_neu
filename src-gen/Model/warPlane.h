@@ -34,6 +34,8 @@ public:
 	 */
 	warPlane(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country);
 
+
+	~warPlane();
 	/**
 	 *
 	 */

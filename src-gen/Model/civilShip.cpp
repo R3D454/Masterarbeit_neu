@@ -26,7 +26,14 @@ civilShip::civilShip(std::string /*in*/n, std::string /*in*/t) {
   object::setName(n);
 	driven::setType(t);
 	object::setKind("Platform");
+  object::incrementCounter();
   equipment = NULL;
+  driven::setEquipment(NULL);
+
+}
+
+civilShip::~civilShip(){
+  object::decrementCounter();
 }
 /**
  *

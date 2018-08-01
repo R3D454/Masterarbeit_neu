@@ -30,8 +30,13 @@ namespace Model {
     object::setCountry(country);
     object::SetDomain("Air");
     object::setPosition(0,0,0);
+    object::incrementCounter();
   }
 
+
+civilPlane::~civilPlane(){
+  object::decrementCounter();
+}
 /**
  *
  */

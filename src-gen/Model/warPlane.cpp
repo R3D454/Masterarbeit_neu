@@ -30,8 +30,20 @@ object::setCountry(country);
 object::setKind("Platform");
 object::SetDomain("Air");
 object::setPosition(0,0,0);
+
+
+
+object::incrementCounter();
+equipment = NULL;
+driven::setEquipment(NULL);
 }
 
+warPlane::~warPlane(){
+  object::decrementCounter();
+
+
+
+}
 /**
  *
  */

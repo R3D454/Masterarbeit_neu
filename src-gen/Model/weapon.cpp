@@ -57,6 +57,13 @@ gunValues weapon::getGunValues(){
   return GunValues;
 }
 
+void weapon::moveGuns(double orientationrate, double elevationrate, double dt){
+GunValues.Orientation = GunValues.Orientation +orientationrate * dt;
+GunValues.Elevation = GunValues.Elevation +elevationrate * dt;
+
+
+}
+
 
 } // of namespace Model
 

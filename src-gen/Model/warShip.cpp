@@ -62,6 +62,13 @@ object::setKind("Platform");
 object::SetDomain("Surface");
 object::setPosition(0,0,0);
 equipment = NULL;
+object::incrementCounter();
+}
+
+
+
+warShip::~warShip(){
+   object::decrementCounter();
 
 }
 

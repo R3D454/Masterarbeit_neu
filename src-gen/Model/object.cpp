@@ -22,6 +22,9 @@
 
 
 namespace Model {
+
+int object::Counter = 0;
+
 // static attributes (if any)
 Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
 
@@ -141,7 +144,7 @@ DISUnit.setExerciseID(0);
 DIS::EntityID DISunit_entity_id;
 DISunit_entity_id.setSite( 0 );
 DISunit_entity_id.setApplication( 1 );
-DISunit_entity_id.setEntity( 1 );
+DISunit_entity_id.setEntity( object::getCounter() );
 
 DISUnit.setEntityID(DISunit_entity_id);
 
@@ -213,6 +216,17 @@ DISUnit.setEntityOrientation(orie);
 		DIS::EntityStatePdu object::getDISPdu(){
 			return DISUnit;
 		}
+
+		void object::incrementCounter(){
+			Counter++;
+		}
+		void object::decrementCounter(){
+			Counter--;
+		}
+		int object::getCounter(){
+			return Counter;
+		}
+
 
 
 } // of namespace Model

@@ -30,6 +30,15 @@ class civilShip: public Surface {
 public:
 
 	/**
+	*
+	* @param Name
+	* @param Typ
+	*/
+	civilShip(std::string /*in*/n, std::string /*in*/t);
+
+
+	~civilShip();
+	/**
 	 *
 	 * @param sensor
 	 */
@@ -40,12 +49,6 @@ public:
 	 */
 	void rmSensor();
 
-	/**
-	 *
-	 * @param Name
-	 * @param Typ
-	 */
-	civilShip(std::string /*in*/n, std::string /*in*/t);
 
 	/**
 	 *

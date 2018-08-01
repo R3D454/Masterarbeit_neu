@@ -17,7 +17,7 @@ const double  b_wgs	    = 6356752.314245179; // Polradius
 //
 // };
 
-struct Vector3D {
+struct Vector3D { // for orientation x = psi, y = theta and z = phi
   double x;
   double y;
   double z;

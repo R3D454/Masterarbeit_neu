@@ -111,6 +111,9 @@ public:
 	 */
 	 void makeDISArticulationsParameter();
 
+
+
+
 protected:
 	/**
 	*
@@ -129,6 +132,7 @@ protected:
 	 */
 	// virtual std::string checkPosition();
 
+	void updateObject(double dt);
 private:
 	/**
 	 *
@@ -151,7 +155,7 @@ private:
 	 */
 	std::string SubCategory;
 
-	Equipment *equipment;
+	Equipment *equipment = NULL;
 };
 /************************************************************/
 /* External declarations (package visibility)               */

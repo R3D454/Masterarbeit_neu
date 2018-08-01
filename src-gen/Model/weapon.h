@@ -13,8 +13,10 @@
 
 #include "string"
 struct gunValues{
-  double Orientation;
-  double Elevation;
+  double Orientation; // from -180.00 to 180.00 degree,  0 points to the front, 90 degree to the left side and -90(270) degree to the right side
+  double OrientationRate;
+  double Elevation; // from 0 to 90 degree
+  double ElevationRate;
 };
 namespace Model {
 
@@ -56,6 +58,8 @@ public:
 	 * @param t
 	 */
 	void setGunValues(double orientation, double elevation);
+
+  void moveGuns(double orientationrate, double elevationrate, double dt);
 	/**
 	 *
 	 * @return type

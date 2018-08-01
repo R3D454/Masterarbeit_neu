@@ -26,6 +26,14 @@ namespace Model {
  */
 class military: public Land {
 public:
+	/**
+	*
+	* @param Name
+	* @param Type
+	*/
+	military(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country);
+
+	~military();
 
 	/**
 	 *
@@ -43,12 +51,6 @@ public:
 	 */
 	void rmEquipment();
 
-	/**
-	 *
-	 * @param Name
-	 * @param Type
-	 */
-	military(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country);
 
 	/**
 	 *

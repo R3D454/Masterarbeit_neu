@@ -193,6 +193,11 @@ public:
     void addArticulationParameter(std::vector<DIS::ArticulationParameter> /*in */ params);
 
     DIS::EntityStatePdu getDISPdu();
+
+    void incrementCounter();
+    void decrementCounter();
+    int getCounter();
+
 private:
 	/**
 	 *
@@ -230,6 +235,10 @@ private:
 	 *
 	 */
 	DIS::EntityStatePdu DISUnit;
+  /**
+   *
+   */
+  static int Counter;
 
 };
 /************************************************************/

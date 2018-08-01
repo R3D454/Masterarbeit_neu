@@ -43,6 +43,9 @@ public:
 	 */
 	warShip(std::string /*in*/Name, std::string /*in*/Type, std::string /*in*/country);
 
+
+	~warShip();
+
 	/**
 	 *
 	 */

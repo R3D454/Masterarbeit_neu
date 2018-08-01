@@ -17,7 +17,43 @@
 namespace Model {
 
 // static attributes (if any)
+military::military(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country) {
+  object::setName(Name);
+  driven::setType(Type);
+  object::setCountry(country);
+  object::setKind("Platform");
+  object::SetDomain("Land");
+  object::setPosition(0,0,0);
 
+  if (Type == "Leopard 1") {
+    driven::setCategory("Tank");
+    driven::setSubCategory("Leopard 1");
+  } else if (Type == "Leopard 2 A1" ||Type == "Leopard 2 A2" ||Type =="Leopard 2 A3" ||Type =="Leopard 2 A4" ||Type =="Leopard 2 A5" ) {
+    driven::setCategory("Tank");
+    driven::setSubCategory("Leopard 2");
+  } else if( Type == "Leopard 2 A6" ||Type =="Leopard 2 A6M") {
+    driven::setCategory("Tank");
+    driven::setSubCategory("Leopard 2 (improved)");
+  }
+  else{
+    std::string SubCategory;
+    std::string Category;
+    std::cout <<"Category as written in DIS Enum:";
+    getline(std::cin, Category);
+    std::cout << std::endl <<"SubCategory as written in DIS Enum:";
+    getline(std::cin, SubCategory);
+    driven::setSubCategory(SubCategory);
+    driven::setCategory(Category);
+  }
+
+  equipment = NULL;
+  driven::setEquipment(NULL);
+  object::incrementCounter();
+}
+
+military::~military(){
+  object::decrementCounter();
+}
 /**
  *
  */
@@ -46,15 +82,6 @@ void military::rmEquipment() {
  * @param Name
  * @param Type
  */
-military::military(std::string /*in*/Name, std::string /*in*/Type,std::string /*in*/country) {
-  object::setName(Name);
-  driven::setType(Type);
-  object::setCountry(country);
-  object::setKind("Platform");
-  object::SetDomain("Land");
-  object::setPosition(0,0,0);
-
-}
 
 /**
  *

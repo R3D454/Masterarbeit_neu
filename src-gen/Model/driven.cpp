@@ -40,6 +40,7 @@ namespace Articulation
 namespace Model {
 
 // static attributes (if any)
+Geodesic geod(Constants::WGS84_a(), Constants::WGS84_f());
 
 /**
  *
@@ -179,6 +180,8 @@ object::setDIS_EntityType_Variables(EntityType);
 
  void driven::makeDISArticulationsParameter(){
 
+   if (equipment !=NULL) {
+
    std::list<Model::weapon*> weapon = 	equipment->getWeapon();
    std::list<Model::sensor*> sensor = equipment->getSensor();
    // DIS::ArticulationParameter DISequipment[(weapon.size()+sensor.size())];
@@ -212,7 +215,8 @@ object::setDIS_EntityType_Variables(EntityType);
           DISequipment[3].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_GUN,Articulation::ELEVATION));
           DISequipment[3].setPartAttachedTo( 1 );
           DISequipment[3].setParameterTypeDesignator(Articulation::ARTICULATED );
-          DISequipment[3].setParameterValue((double)(*it)->getGunValues().Elevation);
+          DISequipment[3].setParameterValue((*it)->getGunValues().Elevation);
+
           paramList.push_back(DISequipment[3]);
           amountTurrents++;
         } else if ((*it)->getType()=="VLS") {
@@ -223,6 +227,8 @@ object::setDIS_EntityType_Variables(EntityType);
           DISequipment.setParameterValue(0);
           paramList.push_back(DISequipment);
           amountLauncher++;
+        } else{
+
         }
 
         }
@@ -268,6 +274,27 @@ object::setDIS_EntityType_Variables(EntityType);
           i++;
      }
      object::addArticulationParameter(params);
+   } else {
+
+   }
+ }
+
+ void driven::updateObject(double dt){
+   position_dec position = object::getPosition();
+   Vector3D orientation = driven::getOrientation();
+   Vector3D velocity = driven::getVelo();
+   position_dec newPosition;
+
+   geod.Direct(position.lat,position.lon,orientation.x,velocity.x*dt,newPosition.lat,newPosition.lon);
+
+   std::list<Model::weapon*> weapon = 	equipment->getWeapon();
+   // std::list<Model::sensor*> sensor = equipment->getSensor();
+
+   for(std::list<Model::weapon*>::iterator it=weapon.begin(); it != weapon.end(); it++)
+     {
+      (*it)->moveGuns(1,1,0.5);
+     }
+
  }
 
 } // of namespace Model

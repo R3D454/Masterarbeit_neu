@@ -34,6 +34,9 @@ public:
 	 */
 	civilPlane(std::string /*in*/n, std::string /*in*/t,std::string/*in*/ country);
 
+
+
+	~civilPlane();
 	/**
 	 *
 	 */

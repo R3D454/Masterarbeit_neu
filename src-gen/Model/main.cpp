@@ -5,11 +5,12 @@
 #include "rocket.h"
 #include "vls.h"
 #include "weapon.h"
+#include "military.h"
 // #include "object.h"
 
 
 // Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
-Geodesic geod(Constants::WGS84_a(), Constants::WGS84_f());
+// Geodesic geod(Constants::WGS84_a(), Constants::WGS84_f());
 
 // #include "externeFunktionen/pos_convert.h"
 
@@ -40,7 +41,8 @@ int main(int argc, char const *argv[]) {
 
 Model::DIS_enum disa;
 
-Model::warShip ship1("Hamburg","F120","Germany");
+Model::warShip ship1("Hamburg","F124","Germany");
+
 Model::Equipment eq1("Alpha");
 Model::cannon can1("Otto Melara MK21",120);
 Model::vls vls1("VLS System",32 );
@@ -55,9 +57,15 @@ ship1.printInfo();
 
 ship1.createDISPDU();
 ship1.sendToNetwork();
+std::cout << ship1.getCounter() << '\n';
 
+Model::military tank1("matilda","Leopard 2 A6","Germany");
+Model::Equipment eq2("Bravo");
+// tank1.addEquipment(&eq2);
+std::cout << tank1.getCounter() << '\n';
 
-
+tank1.createDISPDU();
+tank1.sendToNetwork();
 // std::cout << DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::AZIMUTH)<< '\n';
 // std::cout << DIS::Convert::GetArticulationTypeMetric(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::AZIMUTH)) << '\n';
 // std::cout << DIS::Convert::GetArticulationTypeClass(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::AZIMUTH)) << '\n';
