@@ -6,6 +6,8 @@
 #include "vls.h"
 #include "weapon.h"
 #include "military.h"
+
+#include "externeFunktionen/Timer.h"
 // #include "object.h"
 
 
@@ -14,28 +16,7 @@
 
 // #include "externeFunktionen/pos_convert.h"
 
-namespace Articulation
-   {
-      enum Motion
-      {
-         AZIMUTH = 11,
-         AZIMUTH_RATE = 12,
-         ELEVATION
-      };
 
-      enum Part
-      {
-         PRIMARY_TURRET = 4096,
-         PRIMARY_GUN = 4416,
-         SECONDARY_GUN = 6016
-      };
-
-      enum Designator
-      {
-         ARTICULATED = 0,
-         ATTACHED = 1
-      };
-   }
 
 int main(int argc, char const *argv[]) {
 
@@ -75,18 +56,42 @@ ship2.setMembership("Friendly");
 
 ship2.createDISPDU();
 ship2.sendToNetwork();
-std::cout << ship2.getCounter() << '\n';
 
 Model::military tank2("matilda","Leopard 2 A6","Germany");
 tank2.setMembership("Enemy");
 tank2.createDISPDU();
 tank2.sendToNetwork();
 
-// std::cout << ship2.getIDNumber() << '\n';
-// std::cout << DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::AZIMUTH)<< '\n';
-// std::cout << DIS::Convert::GetArticulationTypeMetric(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::AZIMUTH)) << '\n';
-// std::cout << DIS::Convert::GetArticulationTypeClass(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::AZIMUTH)) << '\n';
+tank2.setPosition(51,0,0);
+tank2.setVelo(30,0,0);
+tank2.setOrientation(90,0,0);   // x = 0 -> towards Northpole ; x = 90 towards east 
 
-// ship1.makeDISArticulationsParameter(&eq1);
+
+
+
+auto start = std::chrono::system_clock::now();
+auto end = std::chrono::system_clock::now();
+std::chrono::duration<double> elapsed_seconds = end-start;
+int i = 0 ;
+while(i <20){
+
+   end = std::chrono::system_clock::now();
+  elapsed_seconds = end-start;
+if (elapsed_seconds.count() < 0.50001 && elapsed_seconds.count() > 0.499999) {
+  std::cout << elapsed_seconds.count() << '\n';
+   start = std::chrono::system_clock::now();
+   i++;
+   tank2.updateObject(elapsed_seconds.count());
+   std::cout<<" lat:" << tank2.getPosition().lat << " lon:"<< tank2.getPosition().lon<<'\n';
+   tank2.createDISPDU();
+   tank2.sendToNetwork();
+}
+// std::cout << elapsed_seconds.count() << '\n';
+elapsed_seconds = end-start;
+
+}
+
+
+
   return 0;
 }

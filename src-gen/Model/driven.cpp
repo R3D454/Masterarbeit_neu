@@ -68,10 +68,10 @@ void driven::rmAllEquipment() {
  *
  * @param velocity
  */
-void driven::setVelo(Vector3D /*in*/v) {
-Velocity.x = v.x;
-Velocity.y = v.y;
-Velocity.z = v.z;
+void driven::setVelo(double/*in*/ x,double/*in*/ y,double/*in*/ z) {
+Velocity.x = x;
+Velocity.y = y;
+Velocity.z = z;
 }
 
 /**
@@ -86,10 +86,10 @@ return Velocity;
  *
  * @param orientation
  */
-void driven::setOrientation(Vector3D /*in*/o) {
-Orientation.x = o.x;
-Orientation.y = o.y;
-Orientation.z = o.z;
+void driven::setOrientation(double/*in*/ x,double/*in*/ y,double/*in*/ z) {
+Orientation.x = x;
+Orientation.y = y;
+Orientation.z = z;
 }
 
 /**
@@ -287,13 +287,14 @@ object::setDIS_EntityType_Variables(EntityType);
 
    geod.Direct(position.lat,position.lon,orientation.x,velocity.x*dt,newPosition.lat,newPosition.lon);
 
-   std::list<Model::weapon*> weapon = 	equipment->getWeapon();
-   // std::list<Model::sensor*> sensor = equipment->getSensor();
-
-   for(std::list<Model::weapon*>::iterator it=weapon.begin(); it != weapon.end(); it++)
-     {
-      (*it)->moveGuns(1,1,0.5);
-     }
+   object::setPosition(newPosition.lat,newPosition.lon,position.height_above_geoid);
+   // std::list<Model::weapon*> weapon = 	equipment->getWeapon();
+   // // std::list<Model::sensor*> sensor = equipment->getSensor();
+   //
+   // for(std::list<Model::weapon*>::iterator it=weapon.begin(); it != weapon.end(); it++)
+   //   {
+   //    (*it)->moveGuns(1,1,0.5);
+   //   }
 
  }
 

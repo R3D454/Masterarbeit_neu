@@ -57,7 +57,7 @@ public:
 	 *
 	 * @param velocity
 	 */
-	void setVelo(Vector3D /*in*/v);
+	void setVelo(double/*in*/ x,double/*in*/ y,double/*in*/ z);
 
 	/**
 	 *
@@ -69,7 +69,7 @@ public:
 	 *
 	 * @param orientation
 	 */
-	void setOrientation(Vector3D /*in*/o);
+	void setOrientation(double/*in*/ x,double/*in*/ y,double/*in*/ z);
 
 	/**
 	 *
@@ -112,6 +112,7 @@ public:
 	 void makeDISArticulationsParameter();
 
 
+	 void updateObject(double dt);
 
 
 protected:
@@ -132,7 +133,6 @@ protected:
 	 */
 	// virtual std::string checkPosition();
 
-	void updateObject(double dt);
 private:
 	/**
 	 *
