@@ -6,17 +6,31 @@
 #include "vls.h"
 #include "weapon.h"
 #include "military.h"
-
-#include "externeFunktionen/Timer.h"
+#include <time.h>
+// #include "externeFunktionen/Timer.h"
 // #include "object.h"
 
-
+#include <inttypes.h>
 // Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
 // Geodesic geod(Constants::WGS84_a(), Constants::WGS84_f());
 
 // #include "externeFunktionen/pos_convert.h"
 
 
+double getDiffTime(struct timespec end, struct timespec start){
+double diff;
+
+diff = ((double)end.tv_sec+1.0e-9*end.tv_nsec)-((double)start.tv_sec+1.0e-9*start.tv_nsec);
+
+
+return round(diff*100)/100;
+
+
+// #define DST "127.0.0.255"
+// #define DST "192.168.4.255"
+#define DST "192.168.4.7"
+
+}
 
 int main(int argc, char const *argv[]) {
 
@@ -40,58 +54,60 @@ ship1.printInfo();
 // std::cout << disa.checkContentType(ship1.getSubCategory()) << '\n';
 
 ship1.createDISPDU();
-ship1.sendToNetwork();
-// std::cout << ship1.getCounter() << '\n';
-
+ship1.sendToNetwork(DST);
+//
+//
 Model::military tank1("matilda","Leopard 2 A6","Germany");
 Model::Equipment eq2("Bravo");
 tank1.addEquipment(&eq2);
-// std::cout << tank1.getCounter() << '\n';
 tank1.setMembership("Enemy");
 tank1.createDISPDU();
-tank1.sendToNetwork();
 
-Model::warShip ship2("Brandenburg","F124","Germany");
+tank1.sendToNetwork(DST);
+
+Model::warShip ship2("Brandenburg","F123","Germany");
 ship2.setMembership("Friendly");
 
 ship2.createDISPDU();
-ship2.sendToNetwork();
+ship2.sendToNetwork(DST);
 
 Model::military tank2("matilda","Leopard 2 A6","Germany");
+tank2.setPosition(51,0,0);
 tank2.setMembership("Enemy");
 tank2.createDISPDU();
-tank2.sendToNetwork();
+tank2.sendToNetwork(DST);
 
-tank2.setPosition(51,0,0);
-tank2.setVelo(30,0,0);
-tank2.setOrientation(90,0,0);   // x = 0 -> towards Northpole ; x = 90 towards east 
-
+ship1.setVelo(300,0,0);
+ship1.setOrientation(90,0,0);   // x = 0 -> towards Northpole ; x = 90 towards east
 
 
+struct timespec start,end;
+double diff;
+clock_gettime(CLOCK_REALTIME, &start);
 
-auto start = std::chrono::system_clock::now();
-auto end = std::chrono::system_clock::now();
-std::chrono::duration<double> elapsed_seconds = end-start;
+// usleep(300000);
+clock_gettime(CLOCK_REALTIME, &end);
+
+std::cout << getDiffTime(end,start) << '\n';
 int i = 0 ;
 while(i <20){
 
-   end = std::chrono::system_clock::now();
-  elapsed_seconds = end-start;
-if (elapsed_seconds.count() < 0.50001 && elapsed_seconds.count() > 0.499999) {
-  std::cout << elapsed_seconds.count() << '\n';
-   start = std::chrono::system_clock::now();
+  clock_gettime(CLOCK_REALTIME, &end);
+  diff = getDiffTime(end,start);
+if (diff == 0.5) {
+  std::cout << diff << '\n';
+  clock_gettime(CLOCK_REALTIME, &start);
    i++;
-   tank2.updateObject(elapsed_seconds.count());
-   std::cout<<" lat:" << tank2.getPosition().lat << " lon:"<< tank2.getPosition().lon<<'\n';
-   tank2.createDISPDU();
-   tank2.sendToNetwork();
+   ship1.updateObject(diff);
+   std::cout<<" lat:" << ship1.getPosition().lat << " lon:"<< ship1.getPosition().lon<<'\n';
+   ship1.createDISPDU();
+   ship1.sendToNetwork(DST);
 }
-// std::cout << elapsed_seconds.count() << '\n';
-elapsed_seconds = end-start;
+diff = getDiffTime(end,start);
 
 }
 
 
-
+// std::cout << i << '\n';
   return 0;
 }

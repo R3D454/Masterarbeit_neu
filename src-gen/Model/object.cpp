@@ -16,7 +16,7 @@
 #include "Model/Equipment.h"
 
 #define PORT 3000
-#define DST "127.0.0.255"
+
 #define BUFSIZE 500
 
 
@@ -144,28 +144,29 @@ std::string object::getKind() {
 void object::makeStdDISPDU(DIS::Vector3Float velo,DIS::Orientation orie){
 DISUnit.setProtocolVersion(6);
 DISUnit.setExerciseID(0);
-
+// if(EntityIDisSet = false){
 DIS::EntityID DISunit_entity_id;
 DISunit_entity_id.setSite( 0 );
 DISunit_entity_id.setApplication( 1 );
-
+int ForceID;
 if (Membership == "Other") {
 	DISunit_entity_id.setEntity( 0 );
-
+	ForceID = 0;
 } else if(Membership == "Friendly") {
-
 	DISunit_entity_id.setEntity( (1 + CounterFriendly * 3)-3 );
+	ForceID = ((1 + CounterFriendly * 3)-3);
 
 
 }else if(Membership == "Enemy"){
 	DISunit_entity_id.setEntity( (2 + CounterEnemy * 3)-3 );
+	ForceID = ((2 + CounterEnemy * 3)-3);
 } else {
 	DISunit_entity_id.setEntity( (3 + CounterNeutral * 3)-3);
+	ForceID = ((3 + CounterNeutral * 3)-3);
 
 }
 
 
-DISUnit.setEntityID(DISunit_entity_id);
 
 DIS::EntityType DISType;
 DISType.setEntityKind(DIS_EntityType.Kind);
@@ -176,8 +177,16 @@ DISType.setSubcategory(DIS_EntityType.SubCategory);
 DISType.setSpecific(0);
 DISType.setExtra(0);
 
-DISUnit.setEntityType(DISType);
+if (EntityIDisSet == false) {
+	DISUnit.setEntityID(DISunit_entity_id);
+	DISUnit.setEntityType(DISType);
+	DISUnit.setForceId(ForceID);
+	EntityIDisSet = true;
+std::cout << "false" << '\n';
+	}
 
+// EntityIDisSet = true;
+// }
 DIS::Vector3Double DISPosition;
 DISPosition.setX(PositionXYZ.x);
 DISPosition.setY(PositionXYZ.y);
@@ -215,7 +224,7 @@ DISUnit.setEntityOrientation(orie);
   	return PositionXYZ;
 	}
 
-	void object::sendToNetwork(){
+	void object::sendToNetwork(char DST[15]){
 		DIS::DataStream buffer( DIS::BIG );
 		char buf[BUFSIZE];
 
@@ -265,7 +274,7 @@ DISUnit.setEntityOrientation(orie);
 			CounterNeutral--;
 
 		}
-		
+
 		std::string object::getMembership(){
 			return Membership;
 		}

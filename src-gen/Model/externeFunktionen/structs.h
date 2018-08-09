@@ -10,7 +10,7 @@ struct DIS_EntityType_Variables{
   int SubCategory;
   int Sprecific;
   int Extra;
-};
+  };
 
 // struct gunValues{
 //   double Orientation;

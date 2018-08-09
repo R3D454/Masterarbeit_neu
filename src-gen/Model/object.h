@@ -228,7 +228,7 @@ public:
     *
     *@
     */
-    void sendToNetwork();
+    void sendToNetwork(char DST[15]);
 
     /**
      *
@@ -316,6 +316,8 @@ private:
    *
    */
   static int CounterNeutral;
+
+  bool EntityIDisSet = false;
 
 };
 /************************************************************/
