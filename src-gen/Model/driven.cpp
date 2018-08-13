@@ -206,7 +206,7 @@ object::setDIS_EntityType_Variables(EntityType);
           DISequipment[1].setParameterValue((*it)->getGunValues().Orientation);
           paramList.push_back(DISequipment[1]);
 
-          DISequipment[2].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET,Articulation::AZIMUTH_RATE));
+          DISequipment[2].setParameterType(DIS::Convert::MakeArticulationParameterType(Articulation::PRIMARY_TURRET+amountTurrents*32,Articulation::AZIMUTH_RATE));
           DISequipment[2].setPartAttachedTo( 0 );
           DISequipment[2].setParameterTypeDesignator(Articulation::ARTICULATED );
           DISequipment[2].setParameterValue((*it)->getGunValues().Orientation);

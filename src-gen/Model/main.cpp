@@ -26,9 +26,9 @@ diff = ((double)end.tv_sec+1.0e-9*end.tv_nsec)-((double)start.tv_sec+1.0e-9*star
 return round(diff*100)/100;
 
 
-// #define DST "127.0.0.255"
+ #define DST "127.0.0.255"
 // #define DST "192.168.4.255"
-#define DST "192.168.4.7"
+//#define DST "192.168.4.7"
 
 }
 
