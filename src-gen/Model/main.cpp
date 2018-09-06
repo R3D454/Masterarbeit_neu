@@ -60,20 +60,20 @@ ship1.sendToNetwork(DST);
 Model::military tank1("matilda","Leopard 2 A6","Germany");
 Model::Equipment eq2("Bravo");
 tank1.addEquipment(&eq2);
-tank1.setMembership("Enemy");
+tank1.setMembership("Friendly");
+tank1.setPosition(53.56868,10.10824,25);
 tank1.createDISPDU();
-
 tank1.sendToNetwork(DST);
 
 Model::warShip ship2("Brandenburg","F123","Germany");
 ship2.setMembership("Friendly");
-
+ship2.setPosition(53.53560576,8.16012917,-2);
 ship2.createDISPDU();
 ship2.sendToNetwork(DST);
 
 Model::military tank2("matilda","Leopard 2 A6","Germany");
-tank2.setPosition(51,0,0);
-tank2.setMembership("Enemy");
+tank2.setPosition(52.98660241,10.11099099,81);
+tank2.setMembership("Friendly");
 tank2.createDISPDU();
 tank2.sendToNetwork(DST);
 
@@ -98,7 +98,18 @@ if (diff == 0.5) {
   std::cout << diff << '\n';
   clock_gettime(CLOCK_REALTIME, &start);
    i++;
-   ship1.updateObject(diff);
+   if (i<10) {
+     ship1.updateObject(diff);
+   }
+   if (i == 10) {
+     ship1.setVelo(100,0,0);
+     ship1.setOrientation(0,0,0);   // x = 0 -> towards Northpole ; x = 90 towards east
+   }
+   if (i > 10) {
+     ship1.updateObject(diff);
+
+   }
+   // ship1.updateObject(diff);
    std::cout<<" lat:" << ship1.getPosition().lat << " lon:"<< ship1.getPosition().lon<<'\n';
    ship1.createDISPDU();
    ship1.sendToNetwork(DST);

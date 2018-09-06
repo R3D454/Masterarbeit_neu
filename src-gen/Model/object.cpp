@@ -182,7 +182,7 @@ if (EntityIDisSet == false) {
 	DISUnit.setEntityType(DISType);
 	DISUnit.setForceId(ForceID);
 	EntityIDisSet = true;
-std::cout << "false" << '\n';
+// std::cout << "false" << '\n';
 	}
 
 // EntityIDisSet = true;
