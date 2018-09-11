@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:C_Cpp="http://www.eclipse.org/papyrus/C_Cpp/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_k0jZYGgfEeiLUJadBRvSBQ" name="test">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_k2sHYGgfEeiLUJadBRvSBQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_yq5eIGgfEeiLUJadBRvSBQ">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://PapyrusC_Cpp_PROFILES/C_Cpp.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_y3z4wGgfEeiLUJadBRvSBQ">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_o0ARgGgfEeiLUJadBRvSBQ" name="People">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CNYUkGggEeiLUJadBRvSBQ" name="dateOfBirth" visibility="private" type="_pFIdwGgfEeiLUJadBRvSBQ" aggregation="shared" association="_CNV4UGggEeiLUJadBRvSBQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CNY7oGggEeiLUJadBRvSBQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CNY7oWggEeiLUJadBRvSBQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Nibr0GghEeiLUJadBRvSBQ" name="name" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_eL7NoGghEeiLUJadBRvSBQ" name="printInfo" specification="_eizckGghEeiLUJadBRvSBQ">
+        <language>C++</language>
+        <body>std::cout&lt;&lt; name&lt;&lt;&quot; was born on &quot;; &#xD;
+dateOfBirth.printDate();</body>
+      </ownedBehavior>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__voqUGggEeiLUJadBRvSBQ" name="People">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ej0LAGghEeiLUJadBRvSBQ" name="x">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IlvvYGghEeiLUJadBRvSBQ" name="ob" type="_pFIdwGgfEeiLUJadBRvSBQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_eizckGghEeiLUJadBRvSBQ" name="printInfo" method="_eL7NoGghEeiLUJadBRvSBQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pFIdwGgfEeiLUJadBRvSBQ" name="Birthday" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_C6f5QGggEeiLUJadBRvSBQ" name="month" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JbJi0GggEeiLUJadBRvSBQ" name="day" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KqmYgGggEeiLUJadBRvSBQ" name="year" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_rr0WsGggEeiLUJadBRvSBQ" name="Birthday" specification="_Rb34AGggEeiLUJadBRvSBQ">
+        <language>C++</language>
+        <body>month = m;&#xD;
+day = d;&#xD;
+year = y;</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_6HG7kGggEeiLUJadBRvSBQ" name="printDate" specification="_6WYtsGggEeiLUJadBRvSBQ">
+        <language>C++</language>
+        <body>std::cout&lt;&lt; day &lt;&lt; &quot;/&quot;&lt;&lt; month &lt;&lt;&quot;/&quot; &lt;&lt;year &lt;&lt;std::endl;</body>
+      </ownedBehavior>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Rb34AGggEeiLUJadBRvSBQ" name="Birthday" method="_rr0WsGggEeiLUJadBRvSBQ">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_stq1QGggEeiLUJadBRvSBQ" name="m">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_tb2w8GggEeiLUJadBRvSBQ" name="y">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uOd5oGggEeiLUJadBRvSBQ" name="d">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6WYtsGggEeiLUJadBRvSBQ" name="printDate" method="_6HG7kGggEeiLUJadBRvSBQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pprVQGgfEeiLUJadBRvSBQ" name="main"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_CNV4UGggEeiLUJadBRvSBQ" memberEnd="_CNYUkGggEeiLUJadBRvSBQ _CNY7omggEeiLUJadBRvSBQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CNXGcGggEeiLUJadBRvSBQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CNXtgGggEeiLUJadBRvSBQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_CNY7omggEeiLUJadBRvSBQ" name="people" type="_o0ARgGgfEeiLUJadBRvSBQ" association="_CNV4UGggEeiLUJadBRvSBQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Pb0PUGghEeiLUJadBRvSBQ" client="_pprVQGgfEeiLUJadBRvSBQ" supplier="_o0ARgGgfEeiLUJadBRvSBQ"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_37fOAGgfEeiLUJadBRvSBQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_37fOAWgfEeiLUJadBRvSBQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/C_Cpp/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusC_Cpp_PROFILES/C_Cpp.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4quSkGgfEeiLUJadBRvSBQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4quSkWgfEeiLUJadBRvSBQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <C_Cpp:Include xmi:id="_59e68GgfEeiLUJadBRvSBQ" header="#include &lt;iostream>" base_class="_o0ARgGgfEeiLUJadBRvSBQ" base_Classifier="_o0ARgGgfEeiLUJadBRvSBQ"/>
+  <C_Cpp:Include xmi:id="_-Nv2QGgfEeiLUJadBRvSBQ" header="#include &lt;iostream>" base_class="_pFIdwGgfEeiLUJadBRvSBQ" base_Classifier="_pFIdwGgfEeiLUJadBRvSBQ"/>
+  <C_Cpp:Include xmi:id="_APjV8GggEeiLUJadBRvSBQ" header="#include &lt;iostream>" base_class="_pprVQGgfEeiLUJadBRvSBQ" base_Classifier="_pprVQGgfEeiLUJadBRvSBQ"/>
+  <standard:Create xmi:id="_WVi8sGggEeiLUJadBRvSBQ" base_BehavioralFeature="_Rb34AGggEeiLUJadBRvSBQ"/>
+  <standard:Create xmi:id="_A_ehkGghEeiLUJadBRvSBQ" base_BehavioralFeature="__voqUGggEeiLUJadBRvSBQ"/>
+</xmi:XMI>

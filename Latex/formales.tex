@@ -1,0 +1,120 @@
+
+
+
+\DeclareGraphicsRule{.pdftex}{pdf}{*}{}
+
+
+\begin{titlepage}
+\singlespacing
+\definecolor{hsu-rot}{rgb}{0.6745,0.0118,0.2275}
+\definecolor{hsu-grau}{rgb}{0.5608,0.5569,0.549}
+\hfill\includegraphics[width=5cm]{hsu_4c} 	
+\vspace{5cm}\\
+\color{hsu-rot}
+
+
+
+\large\bfseries
+Henry Winkel\\[2ex]
+\color{hsu-grau}
+Entwurf einer Klassenhierarchie für militärische Simulationen in DIS \\%%\\[2ex]
+Developing a class hierarchy for military simulations in DIS
+\vfill
+Masterarbeit
+\normalsize
+\vspace{1cm}
+
+\begin{center}
+\mbox{\rule{-0.13\paperwidth}{0ex}\color{hsu-rot}{\rule{1.05\paperwidth}{2mm}} }
+
+\end{center}
+\vspace{1.7cm}
+\color{hsu-grau}
+Fakultät für Elektrotechnik	
+\begin{tabbing}
+Weiterer Prüfer: \= \kill
+Studiengang:\>
+Informatik-Ingenieurwesen / ET2014\\
+Matr.-Nr. 874650  \\
+Übernahme:\>30. Mai 2018\\
+Betreuer:\>Univ.-Prof.~Dr.~phil.~nat.~habil.~Bernd Klauer
+\\Weiterer Prüfer:\>Univ.-Prof.~Dr.-Ing.~habil.~Udo Zölzer 	
+	
+\end{tabbing}
+\vspace{-2.5cm}
+\end{titlepage}
+
+\pagenumbering{roman}
+\cleardoublepage
+\section*{Erklärung}
+% Text nicht ändern, er muss der SPO entsprechen
+Hiermit versichere ich, dass ich diese Arbeit selbständig verfasst,
+keine anderen als die im Quellen- und Literaturverzeichnis genannten Quellen
+und Hilfsmittel, insbesondere keine dort nicht genannten Internet-Quellen 
+benutzt,
+alle aus Quellen und Literatur wörtlich oder sinngemäß entnommenen Stellen als
+solche kenntlich gemacht habe und dass die auf einem elektronischen
+Speichermedium abgegebene Fassung der Arbeit der gedruckten entspricht. 
+
+\vspace{1cm}
+Hamburg, \today\\[-1ex]
+\mbox{}\hspace{2.2cm}\parbox[t]{4cm}{\centering \dotfill\\(Datum)}\hspace{0.5cm}
+					\parbox[t]{8cm}{\centering \dotfill\\(Unterschrift)}
+					
+\cleardoublepage
+%\chapter*{Vorwort}
+%Dank an diverse Personen etc. (nur wenn unbedingt nötig; ist sonst
+%für studentische Arbeit nicht üblich)
+%\listoffigures
+\listoftables
+\lstlistoflistings
+%\newpage
+\addcontentsline{toc}{chapter}{Listings}
+
+\newpage
+\chapter*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis} 
+% Sortierung alphabetisch, nach Reihenfolge des Auftretens oder anderer
+% sinnvoller Reihenfolge
+%
+\begin{acronym}[XXXXXX]
+	\setlength{\itemsep}{-\parsep}
+	\acro{dis}[DIS]{Distributed Interactive Simulation}
+	\acro{ieee}[IEEE]{Institute of Electrical and Electronics Engineers}
+	\acro{pdu}[PDU]{Protocol Data Units}
+	\acro{espdu}[ESPDU]{Entity State PDU}
+	\acro{oop}[OOP]{objektorientierte Programmierung }
+	\acro{uml}[UML]{Unified Modeling Language}
+	\acro{ide}[IDE]{Integrated Development Environment}
+	\acro{hla}[HLA]{High-Level Architecture}
+	\acro{vls}[VLS]{Vertical Launching System }
+	\acro{udp}[UDP]{User Datagram Protocol}
+	
+\end{acronym}
+\newpage
+
+%\include{acronyms} 
+
+
+
+
+
+
+
+\cleardoublepage
+\tableofcontents
+
+
+%\cleardoublepage
+%\chapter*{Häufige verwendete Formelzeichen und Abkürzungen}
+% Sortierung alphabetisch, nach Reihenfolge des Auftretens oder anderer
+% sinnvoller Reihenfolge
+%
+
+%\printglossary[type=\acronymtype,style=long]
+\newpage
+
+%\begin{tabbing}
+%Längstes Formelsymbol \= \kill \\
+
+%\end{tabbing}

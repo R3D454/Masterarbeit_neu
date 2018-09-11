@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_t-dKEKB7EeigjbikMAn0Gw" name="ansatz3">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_uBGOYKB7EeigjbikMAn0Gw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xViaoKB7EeigjbikMAn0Gw" name="Land">
+    <generalization xmi:type="uml:Generalization" xmi:id="_xViaoaB7EeigjbikMAn0Gw" general="_xVjo66B7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TPjpEKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xViaoqB7EeigjbikMAn0Gw" name="checkPosition" visibility="protected">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xViao6B7EeigjbikMAn0Gw" name="isPositionValid" direction="return">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aylVoKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xVjBsKB7EeigjbikMAn0Gw" name="Air">
+    <generalization xmi:type="uml:Generalization" xmi:id="_xVjBsaB7EeigjbikMAn0Gw" general="_xVjo66B7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_THAxEKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjBsqB7EeigjbikMAn0Gw" name="checkPosition" visibility="protected">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjBs6B7EeigjbikMAn0Gw" name="isPositionValid" direction="return">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ah3ZEKB8EeigjbikMAn0Gw" name="Operations"/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_xVjpDaB7EeigjbikMAn0Gw" name="nonDriven">
+      <generalization xmi:type="uml:Generalization" xmi:id="_xVjpDqB7EeigjbikMAn0Gw" general="_xVjowqB7EeigjbikMAn0Gw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Tj4TQKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bCdksKB8EeigjbikMAn0Gw" name="Operations"/>
+    </nestedClassifier>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xVjBtKB7EeigjbikMAn0Gw" name="Subsurface">
+    <generalization xmi:type="uml:Generalization" xmi:id="_xVjBtaB7EeigjbikMAn0Gw" general="_xVjo66B7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TKmQkKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjBtqB7EeigjbikMAn0Gw" name="checkPosition" visibility="protected">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjBt6B7EeigjbikMAn0Gw" name="isPositionValid" direction="return">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_asxokKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xVjowKB7EeigjbikMAn0Gw" name="movable">
+    <generalization xmi:type="uml:Generalization" xmi:id="_xVjowaB7EeigjbikMAn0Gw" general="_xVjpDaB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TpkrkKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_a3r4EKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xVjowqB7EeigjbikMAn0Gw" name="object">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjow6B7EeigjbikMAn0Gw" name="Name" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjoxKB7EeigjbikMAn0Gw" name="Country" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjoxaB7EeigjbikMAn0Gw" name="ProtocolVersion" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjoxqB7EeigjbikMAn0Gw" name="Domain" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjox6B7EeigjbikMAn0Gw" name="Position" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjoyKB7EeigjbikMAn0Gw" name="Kind" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TcOzIKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8GsEcKFJEeiEfvm73haBtw" name="DIS_EntityStatePDU" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjoyaB7EeigjbikMAn0Gw" name="setName">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjoyqB7EeigjbikMAn0Gw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjoy6B7EeigjbikMAn0Gw" name="getName">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjozKB7EeigjbikMAn0Gw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjozaB7EeigjbikMAn0Gw" name="generateEntityID">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjozqB7EeigjbikMAn0Gw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjoz6B7EeigjbikMAn0Gw" name="setCountry">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo0KB7EeigjbikMAn0Gw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo0aB7EeigjbikMAn0Gw" name="getCountry">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo0qB7EeigjbikMAn0Gw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo06B7EeigjbikMAn0Gw" name="setProtocolVersion">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo1KB7EeigjbikMAn0Gw" name="number">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo1aB7EeigjbikMAn0Gw" name="getProtocolVersion">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo1qB7EeigjbikMAn0Gw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo16B7EeigjbikMAn0Gw" name="SetDomain">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo2KB7EeigjbikMAn0Gw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo2aB7EeigjbikMAn0Gw" name="getDomain">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo2qB7EeigjbikMAn0Gw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo26B7EeigjbikMAn0Gw" name="setPosition">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo3KB7EeigjbikMAn0Gw" name="pos"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo3aB7EeigjbikMAn0Gw" name="getPosition">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo3qB7EeigjbikMAn0Gw" name="position" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo36B7EeigjbikMAn0Gw" name="setKind">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo4KB7EeigjbikMAn0Gw" name="value">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo4aB7EeigjbikMAn0Gw" name="getkind">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo4qB7EeigjbikMAn0Gw" name="value" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo46B7EeigjbikMAn0Gw" name="convertToDIS">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo5KB7EeigjbikMAn0Gw" name="location"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo5aB7EeigjbikMAn0Gw" name="orientation"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo5qB7EeigjbikMAn0Gw" name="equipment">
+        <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo56B7EeigjbikMAn0Gw" name="category">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo6KB7EeigjbikMAn0Gw" name="subCategory">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bORzIKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xVjo6aB7EeigjbikMAn0Gw" name="fixed">
+    <generalization xmi:type="uml:Generalization" xmi:id="_xVjo6qB7EeigjbikMAn0Gw" general="_xVjpDaB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TyWNEKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_a9MDIKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xVjo66B7EeigjbikMAn0Gw" name="driven">
+    <generalization xmi:type="uml:Generalization" xmi:id="_xVjo7KB7EeigjbikMAn0Gw" general="_xVjowqB7EeigjbikMAn0Gw"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_7GYpoKB7EeigjbikMAn0Gw" general="_xVjowqB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjo7aB7EeigjbikMAn0Gw" name="Type" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjo7qB7EeigjbikMAn0Gw" name="Category" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjo76B7EeigjbikMAn0Gw" name="Velocity" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjo8KB7EeigjbikMAn0Gw" name="Orientytion" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xVjo8aB7EeigjbikMAn0Gw" name="subCategory" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TThjEKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo8qB7EeigjbikMAn0Gw" name="getCategory">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo86B7EeigjbikMAn0Gw" direction="return">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo9KB7EeigjbikMAn0Gw" name="setCategory">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo9aB7EeigjbikMAn0Gw" name="name">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo9qB7EeigjbikMAn0Gw" name="rmAllEquipment"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo96B7EeigjbikMAn0Gw" name="setVelo">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo-KB7EeigjbikMAn0Gw" name="velocity"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo-aB7EeigjbikMAn0Gw" name="getVelo">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo-qB7EeigjbikMAn0Gw" name="velocity" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo-6B7EeigjbikMAn0Gw" name="checkPosition" visibility="protected" isAbstract="true">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo_KB7EeigjbikMAn0Gw" name="isPositionValid" direction="return">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo_aB7EeigjbikMAn0Gw" name="setOrientation">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjo_qB7EeigjbikMAn0Gw" name="orientation"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjo_6B7EeigjbikMAn0Gw" name="getOrientation">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjpAKB7EeigjbikMAn0Gw" name="orientation" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjpAaB7EeigjbikMAn0Gw" name="getSubCategory">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjpAqB7EeigjbikMAn0Gw" direction="return">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjpA6B7EeigjbikMAn0Gw" name="setSubCategory">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjpBKB7EeigjbikMAn0Gw" name="name">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjpBaB7EeigjbikMAn0Gw" name="setType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjpBqB7EeigjbikMAn0Gw" name="type">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjpB6B7EeigjbikMAn0Gw" name="getType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjpCKB7EeigjbikMAn0Gw" name="type" direction="return">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bU1uIKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xVjpCaB7EeigjbikMAn0Gw" name="Surface">
+    <generalization xmi:type="uml:Generalization" xmi:id="_xVjpCqB7EeigjbikMAn0Gw" general="_xVjo66B7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TBEhIKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xVjpC6B7EeigjbikMAn0Gw" name="checkPosition" visibility="protected">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xVjpDKB7EeigjbikMAn0Gw" name="isPositionValid" direction="return">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_am6RIKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_H4WgQKB8EeigjbikMAn0Gw" name="warShip">
+    <generalization xmi:type="uml:Generalization" xmi:id="_H4WgQaB8EeigjbikMAn0Gw">
+      <general xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_vUWaEGMyEeiWHOPS8-ndpg"/>
+    </generalization>
+    <generalization xmi:type="uml:Generalization" xmi:id="_Jk3FYKB8EeigjbikMAn0Gw" general="_xVjpCaB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_H4WgQqB8EeigjbikMAn0Gw" name="equipment" visibility="private" aggregation="shared">
+      <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H4WgQ6B8EeigjbikMAn0Gw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H4WgRKB8EeigjbikMAn0Gw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_S8uMoKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4WgRaB8EeigjbikMAn0Gw" name="addEquipment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H4WgRqB8EeigjbikMAn0Gw" name="Name">
+        <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4WgR6B8EeigjbikMAn0Gw" name="warShip">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H4WgSKB8EeigjbikMAn0Gw" name="Name">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H4WgSaB8EeigjbikMAn0Gw" name="Typ">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4WgSqB8EeigjbikMAn0Gw" name="rmEquipment"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4WgS6B8EeigjbikMAn0Gw" name="calcShoot"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4WgTKB8EeigjbikMAn0Gw" name="getEquipment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H4WgTaB8EeigjbikMAn0Gw" name="equipment" direction="return">
+        <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZX8joKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_H4XHUKB8EeigjbikMAn0Gw" name="warPlane">
+    <generalization xmi:type="uml:Generalization" xmi:id="_H4XHUaB8EeigjbikMAn0Gw">
+      <general xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_0eCQsGMyEeiWHOPS8-ndpg"/>
+    </generalization>
+    <generalization xmi:type="uml:Generalization" xmi:id="_KHZxwKB8EeigjbikMAn0Gw" general="_xVjBsKB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_H4XHUqB8EeigjbikMAn0Gw" name="equipment" visibility="private" aggregation="shared">
+      <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H4XHU6B8EeigjbikMAn0Gw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H4XHVKB8EeigjbikMAn0Gw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_S3ZAsKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4XHVaB8EeigjbikMAn0Gw" name="warPlane">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H4XHVqB8EeigjbikMAn0Gw" name="Name">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H4XHV6B8EeigjbikMAn0Gw" name="Type">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4XHWKB8EeigjbikMAn0Gw" name="rmEquipment"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4XHWaB8EeigjbikMAn0Gw" name="addEquipment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H4XHWqB8EeigjbikMAn0Gw" name="Name">
+        <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4XHW6B8EeigjbikMAn0Gw" name="calcShoot"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_H4XHXKB8EeigjbikMAn0Gw" name="getEquipment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_H4XHXaB8EeigjbikMAn0Gw" name="equipment" direction="return">
+        <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aHPSkKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LxZOYKB8EeigjbikMAn0Gw" name="military">
+    <generalization xmi:type="uml:Generalization" xmi:id="_LxZOYaB8EeigjbikMAn0Gw">
+      <general xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_vIYaoGMyEeiWHOPS8-ndpg"/>
+    </generalization>
+    <generalization xmi:type="uml:Generalization" xmi:id="_MI3TMKB8EeigjbikMAn0Gw" general="_xViaoKB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LxZOYqB8EeigjbikMAn0Gw" name="equipment" visibility="private" aggregation="shared">
+      <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LxZOY6B8EeigjbikMAn0Gw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LxZOZKB8EeigjbikMAn0Gw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QDcSYKB8EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LxZOZaB8EeigjbikMAn0Gw" name="calcShoot"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LxZOZqB8EeigjbikMAn0Gw" name="addEquipment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LxZOZ6B8EeigjbikMAn0Gw" name="Name">
+        <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LxZOaKB8EeigjbikMAn0Gw" name="rmEquipment"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LxZOaaB8EeigjbikMAn0Gw" name="military">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LxZOaqB8EeigjbikMAn0Gw" name="Name">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LxZOa6B8EeigjbikMAn0Gw" name="Type">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LxZObKB8EeigjbikMAn0Gw" name="getEquipment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LxZObaB8EeigjbikMAn0Gw" name="equipment" direction="return">
+        <type xmi:type="uml:Class" href="file:/E:/Dokumente/OneDrive/Studium/Masterarbeit/Model.uml#_CELO4GM2EeiWHOPS8-ndpg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aNkkEKB8EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WfYr8KFJEeiEfvm73haBtw" name="civilShip">
+    <generalization xmi:type="uml:Generalization" xmi:id="_aYx_YKFJEeiEfvm73haBtw" general="_xVjpCaB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gVX5oKFJEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gVWrgKFJEeiEfvm73haBtw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WsU7wKFJEeiEfvm73haBtw" name="civilPlane">
+    <generalization xmi:type="uml:Generalization" xmi:id="_ZwjhwKFJEeiEfvm73haBtw" general="_xVjBsKB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gNCdAKFJEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gNFgUKFJEeiEfvm73haBtw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_a5qe4KFJEeiEfvm73haBtw" name="civilCar">
+    <generalization xmi:type="uml:Generalization" xmi:id="_cq7oMKFJEeiEfvm73haBtw" general="_xViaoKB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gbS7cKFJEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gbUJkKFJEeiEfvm73haBtw" name="Operations"/>
+  </packagedElement>
+</uml:Model>

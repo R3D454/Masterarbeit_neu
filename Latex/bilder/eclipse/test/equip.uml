@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:C_Cpp="http://www.eclipse.org/papyrus/C_Cpp/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_xuazoKFKEeiEfvm73haBtw" name="equip">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_x0JBIKFKEeiEfvm73haBtw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_NNe7YKFMEeiEfvm73haBtw">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_NbKLAKFMEeiEfvm73haBtw">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://PapyrusC_Cpp_PROFILES/C_Cpp.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Np4jgKFMEeiEfvm73haBtw">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fCQQKFKEeiEfvm73haBtw" name="Canonn">
+      <generalization xmi:type="uml:Generalization" xmi:id="_5fCQQaFKEeiEfvm73haBtw" general="_5fC3XKFKEeiEfvm73haBtw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fCQQqFKEeiEfvm73haBtw" name="caliber" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fCQQ6FKEeiEfvm73haBtw" name="bullets" visibility="private" type="_5fC3kaFKEeiEfvm73haBtw" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5fCQRKFKEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5fCQRaFKEeiEfvm73haBtw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_kO9IY6FLEeiEfvm73haBtw" name="bullet" type="_5fC3kaFKEeiEfvm73haBtw" aggregation="composite" association="_kO9IYKFLEeiEfvm73haBtw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kO9IZKFLEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kO9IZaFLEeiEfvm73haBtw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qXWC8KFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fCQRqFKEeiEfvm73haBtw" name="Cannon">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fCQR6FKEeiEfvm73haBtw" name="name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fCQSKFKEeiEfvm73haBtw" name="type">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fCQSaFKEeiEfvm73haBtw" name="Caliber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fCQSqFKEeiEfvm73haBtw" name="getCaliber">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fCQS6FKEeiEfvm73haBtw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fCQTKFKEeiEfvm73haBtw" name="setCaliber">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fCQTaFKEeiEfvm73haBtw" name="caliber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fCQTqFKEeiEfvm73haBtw" name="setBullet">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fCQT6FKEeiEfvm73haBtw" name="Bullet" type="_5fC3kaFKEeiEfvm73haBtw"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fCQUKFKEeiEfvm73haBtw" name="getBullet">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fCQUaFKEeiEfvm73haBtw" name="Bullet" type="_5fC3kaFKEeiEfvm73haBtw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fCQUqFKEeiEfvm73haBtw" name="printInfo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qXWC8aFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fC3UKFKEeiEfvm73haBtw" name="sonar">
+      <generalization xmi:type="uml:Generalization" xmi:id="_5fC3UaFKEeiEfvm73haBtw" general="_5fC3gKFKEeiEfvm73haBtw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rk2-8KFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3UqFKEeiEfvm73haBtw" name="sonar">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3U6FKEeiEfvm73haBtw" name="name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3VKFKEeiEfvm73haBtw" name="type">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3VaFKEeiEfvm73haBtw" name="printInfo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rk2-8aFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fC3VqFKEeiEfvm73haBtw" name="Munition">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3V6FKEeiEfvm73haBtw" name="Kind" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qzDukKFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3WKFKEeiEfvm73haBtw" name="setKind">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3WaFKEeiEfvm73haBtw" name="value">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3WqFKEeiEfvm73haBtw" name="getkind">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3W6FKEeiEfvm73haBtw" name="value" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qzDukaFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fC3XKFKEeiEfvm73haBtw" name="Weapon">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3XaFKEeiEfvm73haBtw" name="name" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3XqFKEeiEfvm73haBtw" name="Type" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qcTbcKFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3X6FKEeiEfvm73haBtw" name="setName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3YKFKEeiEfvm73haBtw" name="n">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3YaFKEeiEfvm73haBtw" name="getName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3YqFKEeiEfvm73haBtw" name="name" direction="return">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3Y6FKEeiEfvm73haBtw" name="printInfo" isAbstract="true"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qcTbcaFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fC3ZKFKEeiEfvm73haBtw" name="rocket">
+      <generalization xmi:type="uml:Generalization" xmi:id="_5fC3ZaFKEeiEfvm73haBtw" general="_5fC3VqFKEeiEfvm73haBtw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3ZqFKEeiEfvm73haBtw" name="typ" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qoIQ8aFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3Z6FKEeiEfvm73haBtw" name="rocket">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3aKFKEeiEfvm73haBtw" name="t">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3aaFKEeiEfvm73haBtw" name="printInfo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3aqFKEeiEfvm73haBtw" name="setType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3a6FKEeiEfvm73haBtw" name="Name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3bKFKEeiEfvm73haBtw" name="getType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3baFKEeiEfvm73haBtw" name="type">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qoIQ8KFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fC3bqFKEeiEfvm73haBtw" name="Radar">
+      <generalization xmi:type="uml:Generalization" xmi:id="_5fC3b6FKEeiEfvm73haBtw" general="_5fC3gKFKEeiEfvm73haBtw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3cKFKEeiEfvm73haBtw" name="range" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rHfGcKFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3caFKEeiEfvm73haBtw" name="radar">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3cqFKEeiEfvm73haBtw" name="type">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3c6FKEeiEfvm73haBtw" name="range">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3dKFKEeiEfvm73haBtw" name="name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3daFKEeiEfvm73haBtw" name="printInfo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3dqFKEeiEfvm73haBtw" name="setRange">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3d6FKEeiEfvm73haBtw" name="Name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3eKFKEeiEfvm73haBtw" name="getRange">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3eaFKEeiEfvm73haBtw" name="type" direction="return">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rHfGcaFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fC3eqFKEeiEfvm73haBtw" name="Camera">
+      <generalization xmi:type="uml:Generalization" xmi:id="_5fC3e6FKEeiEfvm73haBtw" general="_5fC3gKFKEeiEfvm73haBtw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rDxEEKFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3fKFKEeiEfvm73haBtw" name="camera">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3faFKEeiEfvm73haBtw" name="name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3fqFKEeiEfvm73haBtw" name="type">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3f6FKEeiEfvm73haBtw" name="printInfo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rDwdAKFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fC3gKFKEeiEfvm73haBtw" name="Sensor">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3gaFKEeiEfvm73haBtw" name="name" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3gqFKEeiEfvm73haBtw" name="Category" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3g6FKEeiEfvm73haBtw" name="Type" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_atY2EKFMEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3hKFKEeiEfvm73haBtw" name="setName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3haFKEeiEfvm73haBtw" name="n">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3hqFKEeiEfvm73haBtw" name="getName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3h6FKEeiEfvm73haBtw" name="name" direction="return">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3iKFKEeiEfvm73haBtw" name="printInfo" isAbstract="true"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3iaFKEeiEfvm73haBtw" name="setCategory">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3iqFKEeiEfvm73haBtw" name="name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3i6FKEeiEfvm73haBtw" name="getCategory">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3jKFKEeiEfvm73haBtw" direction="return">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3jaFKEeiEfvm73haBtw" name="getType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3jqFKEeiEfvm73haBtw" name="type" direction="return">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3j6FKEeiEfvm73haBtw" name="setType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3kKFKEeiEfvm73haBtw" name="Name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_q-uMAKFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fC3kaFKEeiEfvm73haBtw" name="Bullet">
+      <generalization xmi:type="uml:Generalization" xmi:id="_5fC3kqFKEeiEfvm73haBtw" general="_5fC3VqFKEeiEfvm73haBtw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fC3k6FKEeiEfvm73haBtw" name="typ" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qsyHcaFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3lKFKEeiEfvm73haBtw" name="bullet">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3laFKEeiEfvm73haBtw" name="t">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3lqFKEeiEfvm73haBtw" name="setType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3l6FKEeiEfvm73haBtw" name="Name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3mKFKEeiEfvm73haBtw" name="getType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fC3maFKEeiEfvm73haBtw" name="Name" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fC3mqFKEeiEfvm73haBtw" name="printInfo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qsyHcKFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fDeYKFKEeiEfvm73haBtw" name="Vls" visibility="public">
+      <generalization xmi:type="uml:Generalization" xmi:id="_5fDeYaFKEeiEfvm73haBtw" general="_5fC3XKFKEeiEfvm73haBtw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fDeYqFKEeiEfvm73haBtw" name="rockets" visibility="private" type="_5fC3ZKFKEeiEfvm73haBtw" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5fDeY6FKEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5fDeZKFKEeiEfvm73haBtw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fDeZaFKEeiEfvm73haBtw" name="numberOfCells" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jzrhoqFLEeiEfvm73haBtw" name="rocket" visibility="private" type="_5fC3ZKFKEeiEfvm73haBtw" aggregation="composite" association="_jzq6kKFLEeiEfvm73haBtw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzrho6FLEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzsIsKFLEeiEfvm73haBtw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qgpv8aFLEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDeZqFKEeiEfvm73haBtw" name="vls">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDeZ6FKEeiEfvm73haBtw" name="name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDeaKFKEeiEfvm73haBtw" name="cells">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDeaaFKEeiEfvm73haBtw" name="type">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDeaqFKEeiEfvm73haBtw" name="printInfo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDea6FKEeiEfvm73haBtw" name="getType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDebKFKEeiEfvm73haBtw" name="type">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDebaFKEeiEfvm73haBtw" name="setType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDebqFKEeiEfvm73haBtw" name="Name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDeb6FKEeiEfvm73haBtw" name="addRocket">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDecKFKEeiEfvm73haBtw" name="rocket" type="_5fC3ZKFKEeiEfvm73haBtw"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDecaFKEeiEfvm73haBtw" name="rmRocket">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDecqFKEeiEfvm73haBtw" type="_5fC3ZKFKEeiEfvm73haBtw"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDec6FKEeiEfvm73haBtw" name="setNumberOfCells">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDedKFKEeiEfvm73haBtw" name="n">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDedaFKEeiEfvm73haBtw" name="getNumberOfCells"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qgpv8KFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5fDedqFKEeiEfvm73haBtw" name="Equipment">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fDed6FKEeiEfvm73haBtw" name="name" visibility="private">
+        <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5fDeeKFKEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5fDeeaFKEeiEfvm73haBtw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fDeeqFKEeiEfvm73haBtw" name="weapons" visibility="private" type="_5fC3XKFKEeiEfvm73haBtw" aggregation="shared">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5fDee6FKEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5fDefKFKEeiEfvm73haBtw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5fDefaFKEeiEfvm73haBtw" name="sensors" visibility="private" type="_5fC3gKFKEeiEfvm73haBtw" aggregation="shared">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5fDefqFKEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5fDef6FKEeiEfvm73haBtw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FrBE8KFLEeiEfvm73haBtw" name="weapon" type="_5fC3XKFKEeiEfvm73haBtw" aggregation="shared" association="_Fq_PwKFLEeiEfvm73haBtw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FrDhMKFLEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FrDhMaFLEeiEfvm73haBtw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GRXTQqFLEeiEfvm73haBtw" name="sensor" type="_5fC3gKFKEeiEfvm73haBtw" aggregation="shared" association="_GRWsMKFLEeiEfvm73haBtw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GRXTQ6FLEeiEfvm73haBtw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GRXTRKFLEeiEfvm73haBtw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qOpZ8KFLEeiEfvm73haBtw" name="listOfSensors" visibility="private" type="_5fC3UKFKEeiEfvm73haBtw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ogW2sKFMEeiEfvm73haBtw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ogbvMKFMEeiEfvm73haBtw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_e_3X4KFMEeiEfvm73haBtw" name="listOfWeapons" visibility="private" type="_5fC3XKFKEeiEfvm73haBtw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_tIRdAKFMEeiEfvm73haBtw" name="Attribute" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDegKFKEeiEfvm73haBtw" name="Equipment">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDegaFKEeiEfvm73haBtw" name="Name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDegqFKEeiEfvm73haBtw" name="setName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDeg6FKEeiEfvm73haBtw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDehKFKEeiEfvm73haBtw" name="getName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDehaFKEeiEfvm73haBtw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDehqFKEeiEfvm73haBtw" name="getWeapon">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDeh6FKEeiEfvm73haBtw" name="Name" direction="return">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_AQEM0DWpEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDeiKFKEeiEfvm73haBtw" name="setWeapon">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5fDeiaFKEeiEfvm73haBtw" name="Name">
+          <type xmi:type="uml:Class" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_0v5VQDWoEea5ROkfuvcZmg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5fDeiqFKEeiEfvm73haBtw" name="printInfo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qOqBAKFLEeiEfvm73haBtw" name="Operations"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Fq_PwKFLEeiEfvm73haBtw" memberEnd="_FrBE8KFLEeiEfvm73haBtw _FrDhMqFLEeiEfvm73haBtw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FrAd4KFLEeiEfvm73haBtw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FrAd4aFLEeiEfvm73haBtw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_FrDhMqFLEeiEfvm73haBtw" name="equipment" type="_5fDedqFKEeiEfvm73haBtw" association="_Fq_PwKFLEeiEfvm73haBtw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_GRWsMKFLEeiEfvm73haBtw" memberEnd="_GRXTQqFLEeiEfvm73haBtw _GRXTRaFLEeiEfvm73haBtw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GRXTQKFLEeiEfvm73haBtw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GRXTQaFLEeiEfvm73haBtw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_GRXTRaFLEeiEfvm73haBtw" name="equipment" type="_5fDedqFKEeiEfvm73haBtw" association="_GRWsMKFLEeiEfvm73haBtw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jzq6kKFLEeiEfvm73haBtw" memberEnd="_jzrhoqFLEeiEfvm73haBtw _jzsIsaFLEeiEfvm73haBtw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jzrhoKFLEeiEfvm73haBtw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jzrhoaFLEeiEfvm73haBtw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_jzsIsaFLEeiEfvm73haBtw" name="vls" type="_5fDeYKFKEeiEfvm73haBtw" association="_jzq6kKFLEeiEfvm73haBtw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_kO9IYKFLEeiEfvm73haBtw" memberEnd="_kO9IY6FLEeiEfvm73haBtw _kO9IZqFLEeiEfvm73haBtw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kO9IYaFLEeiEfvm73haBtw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kO9IYqFLEeiEfvm73haBtw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_kO9IZqFLEeiEfvm73haBtw" name="canonn" type="_5fCQQKFKEeiEfvm73haBtw" association="_kO9IYKFLEeiEfvm73haBtw"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UBlscKFMEeiEfvm73haBtw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UBovwKFMEeiEfvm73haBtw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UBovwaFMEeiEfvm73haBtw" key="Version" value="0.1.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UBovwqFMEeiEfvm73haBtw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UBovw6FMEeiEfvm73haBtw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UBovxKFMEeiEfvm73haBtw" key="Date" value="2015-01-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UBovxaFMEeiEfvm73haBtw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UBm6kKFMEeiEfvm73haBtw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UBovxqFMEeiEfvm73haBtw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UBovx6FMEeiEfvm73haBtw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/C_Cpp/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusC_Cpp_PROFILES/C_Cpp.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UBpW0KFMEeiEfvm73haBtw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UBp94KFMEeiEfvm73haBtw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <C_Cpp:Array xmi:id="_kfN8gKFMEeiEfvm73haBtw" base_property="_e_3X4KFMEeiEfvm73haBtw"/>
+  <C_Cpp:Array xmi:id="_mylGQKFMEeiEfvm73haBtw" base_property="_qOpZ8KFLEeiEfvm73haBtw"/>
+  <C_Cpp:Array xmi:id="_6EdX4KFSEeiEfvm73haBtw" base_property="_5fDeYqFKEeiEfvm73haBtw"/>
+  <C_Cpp:Array xmi:id="_7Xee8KFSEeiEfvm73haBtw" base_property="_5fCQQ6FKEeiEfvm73haBtw"/>
+</xmi:XMI>

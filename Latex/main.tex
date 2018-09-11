@@ -1,0 +1,111 @@
+
+
+\documentclass[a4paper,12pt,ngerman]{scrreprt}
+
+\newif\ifpdfout 
+\ifnum\pdfoutput>0
+  \pdfouttrue 
+\else
+  \pdfoutfalse
+\fi
+
+
+
+\usepackage[pdftitle={Bachelor-Arbeit Henry Winkel}, colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black, anchorcolor=black, pagecolor=black, plainpages=false, pdfpagelabels, backref=false]{hyperref}
+
+\ifpdfout 
+\usepackage{pdfpages} % Ganze-Seiten aus pdf-Dateien einfügen
+\fi
+
+
+% Notwendige Style Files
+\usepackage{ngerman}
+\usepackage{bibgerm}
+\usepackage{booktabs}
+
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+\usepackage{rotating}
+\usepackage{url}      
+\usepackage[nottoc,numbib]{tocbibind}
+\bibliographystyle{plain} %plain
+\usepackage[nonumberlist,acronym,section]{glossaries}
+%\usepackage{glossaries}
+%\usepackage[nonumberlist]{glossaries}
+
+\usepackage{setspace}
+
+\usepackage{graphicx}
+\usepackage{svg}
+
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage{xcolor}
+\usepackage{textcomp}
+
+ \usepackage{multirow}
+
+
+
+\ifpdfout
+\DeclareGraphicsRule{.pdftex}{pdf}{*}{} % nötig bei pdflatex damit in
+% pdftex_t-Dateien aus xfig eingebundene pdftex-Dateien als pdf erkannt werden
+\fi
+
+\usepackage{lscape}
+%%\usepackage[latin1]{inputenc} % Umlaute unter Windows => eines auswählen
+\usepackage[utf8]{inputenc}	% Umlaute unter Linux
+\usepackage[T1]{fontenc}
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage[percent]{overpic}	% Overpic
+\usepackage{listings} % falls keine Programmlistings nötig: auskommentieren 
+\lstset{language=C++,
+		 numbers=left, 
+		 keywordstyle=\color{blue},
+		 stringstyle=\color{red},
+		 commentstyle=\color{green},
+		 morecomment=[l][\color{magenta}]{\#}
+		 numberstyle = \tiny,
+		 captionpos=b,
+		 frame=single,
+		 basicstyle=\ttfamily						
+		}
+\pagestyle{headings}
+\setlength{\parindent}{0em}
+
+\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+\usepackage{acronym}
+
+
+\makeglossaries
+
+%\loadglsentries{acronyms}
+
+
+\usepackage{filecontents} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%
+
+
+
+%
+\renewcommand{\figurename}{Bild}			% definition Name des Bildes
+\input{formales} % Deckblatt und Formalitaeten in extra Tex-file
+
+
+\pagenumbering{arabic}
+\onehalfspacing
+\include{einleitung}
+\include{hauptteil} 
+
+\bibliography{literatur}
+
+\bibliographystyle{alphadin}
+\end{document}

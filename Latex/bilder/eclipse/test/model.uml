@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_7g4xIKB3EeigjbikMAn0Gw" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_7oem4KB3EeigjbikMAn0Gw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fttIoKB4EeigjbikMAn0Gw" name="Object">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gt9PQKB5EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XD1d4KB6EeigjbikMAn0Gw" name="DIS_EntityStatePDU" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_iU3isKB5EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_f5rvIKB4EeigjbikMAn0Gw" name="fixed">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Yj0fYKB5EeigjbikMAn0Gw" general="_fttIoKB4EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ktniwKB5EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ktltkKB5EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_griC0KB4EeigjbikMAn0Gw" name="movable">
+    <generalization xmi:type="uml:Generalization" xmi:id="_ZonkQKB5EeigjbikMAn0Gw" general="_fttIoKB4EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_k18YUKB5EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_k1-0kKB5EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hKdagKB4EeigjbikMAn0Gw" name="civil">
+    <generalization xmi:type="uml:Generalization" xmi:id="_aUfy0KB5EeigjbikMAn0Gw" general="_griC0KB4EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_lB9bEKB5EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_lB-pMKB5EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hZR5oKB4EeigjbikMAn0Gw" name="military">
+    <generalization xmi:type="uml:Generalization" xmi:id="_aCPlMKB5EeigjbikMAn0Gw" general="_griC0KB4EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_k8oPIKB5EeigjbikMAn0Gw" name="Attribute" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_k8qEUKB5EeigjbikMAn0Gw" name="Operations"/>
+  </packagedElement>
+</uml:Model>

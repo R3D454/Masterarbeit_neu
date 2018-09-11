@@ -1,0 +1,81 @@
+\begin{thebibliography}{10}
+
+\bibitem{Wikipedia.}
+Distributed interactive simulation.
+\newblock \url{https://de.wikipedia.org/w/index.php?oldid=175148570}.
+
+\bibitem{BenjaminBuch.}
+{Benjamin Buch}.
+\newblock C++ programmierung.
+\newblock
+  \url{https://upload.wikimedia.org/wikibooks/de/archive/5/59/20120702072116%21Cplusplus.pdf}.
+\newblock [Online, Stand 08. August 2018].
+
+\bibitem{HelmutErlenkotter.}
+{Helmut Erlenk{\"o}tter}.
+\newblock {\em C++ Objektorientiertes Programmieren von Anfang an}.
+\newblock 17. edition.
+
+\bibitem{HenryWinkel.}
+{Henry Winkel}.
+\newblock Beurteilung der open-dis c++ library zur simulation von
+  milit{\"a}rischen szenarien.
+
+\bibitem{Krau.}
+Peter Krau{\ss}.
+\newblock Objektorientiertes programmieren in c++.
+\newblock
+  \url{https://www.ldv.ei.tum.de/fileadmin/w00bfa/www/Vorlesungen/cpp/CPP-Skript.pdf}.
+\newblock [Online, Stand 09. August 2018].
+
+\bibitem{LucienZalcman.}
+{Lucien Zalcman}.
+\newblock What distributed interactive simulation (dis) protocol data units
+  (pdu) should my australian defence force simulator have?
+\newblock
+  \url{https://www.researchgate.net/profile/Lucien_Zalcman/publication/27254323_What_Distributed_Interactive_Simulation_DIS_Protocol_Data_Units_PDU_should_My_Australian_Defence_Force_Simulator_have/links/58d9845ca6fdccca1c4bff5d/What-Distributed-Interactive-Simulation-DIS-Protocol-Data-Units-PDU-should-My-Australian-Defence-Force-Simulator-have.pdf}.
+\newblock [Online, Stand 06. August 2018].
+
+\bibitem{MarkMcCall.}
+{Mark McCall}.
+\newblock Distributed interactive simulation (dis) 101.
+\newblock
+  \url{https://www.sisostds.org/DigitalLibrary.aspx?Command=Core_Download&EntryId=36474}.
+\newblock [Online, Stand 06. August 2018].
+
+\bibitem{Prof.Dr.AlfredIrber.}
+{Prof. Dr. Alfred Irber}.
+\newblock Objektorientierte programmierung (oop).
+\newblock
+  \url{http://lsw.ee.hm.edu/~irber/oop/skriptum/skriptum_oop_cpp_ws12.pdf}.
+\newblock [Online, Stand 09. August 2018].
+
+\bibitem{Prof.Dr.Ing.WolfgangSchroderPreikschat.}
+{Prof. Dr.-Ing. Wolfgang Schr{\"o}der-Preikschat}.
+\newblock Programmierung in c++.
+\newblock \url{https://www4.cs.fau.de/Lehre/SS05/V_VS/Uebung/folien/2-A6.pdf}.
+\newblock [Online, Stand 08. August 2018].
+
+\bibitem{SebastianMeyer.}
+{Sebastian Meyer}.
+\newblock C vs. c++ proseminar c - {\glqq}grundlagen und konzepte{\grqq}{\glq}
+  2013.
+\newblock
+  \url{https://wr.informatik.uni-hamburg.de/_media/teaching/sommersemester_2013/cgk-13-meyer-c-vs-c_-ausarbeitung.pdf}.
+\newblock [Online, Stand 08. August 2018].
+
+\bibitem{Shanks.}
+Graham Shanks.
+\newblock Enumeration and bit encoded values for dis.
+
+\bibitem{SISOStandardsActivityCommitteeoftheIEEEComputerSociety.}
+{SISO Standards Activity Committee of the IEEE Computer Society}.
+\newblock Ieee std 1278.1-2012, ieee standard for distributed interactive
+  simulation---application protocols.
+
+\bibitem{SISOStandardsActivityCommitteeoftheIEEEComputerSociety.6November2015}
+{SISO Standards Activity Committee of the IEEE Computer Society}.
+\newblock Ieee standard for distributed interactive simulation (dis)--
+  communication services and profiles, 6 November 2015.
+
+\end{thebibliography}

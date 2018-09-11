@@ -1,0 +1,6 @@
+% General technical informatik stuff
+\newacronym{ac97}{AC '97}{Audio Codec '97}
+\newacronym{cpu}{CPU}{Central Processing Unit}
+\newacronym{intel}[INTEL}{Intel Cooperation}
+\newacronym{prhs}{PRHS}{Partial Reconfigurable Heterogeneous System}
+\newacronym{spif}{S/PDIF}{Sony/Philips Digital Interface}

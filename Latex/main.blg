@@ -1,0 +1,37 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+The style file: plain.bst
+A level-1 auxiliary file: einleitung.aux
+A level-1 auxiliary file: hauptteil.aux
+Illegal, another \bibstyle command---line 65 of file main.aux
+ : \bibstyle
+ :          {alphadin}
+I'm skipping whatever remains of this command
+Database file #1: literatur.bib
+Warning--entry type for "BenjaminBuch." isn't style-file defined
+--line 3 of file literatur.bib
+Warning--entry type for "HenryWinkel." isn't style-file defined
+--line 39 of file literatur.bib
+Warning--entry type for "Krau." isn't style-file defined
+--line 49 of file literatur.bib
+Warning--entry type for "LucienZalcman." isn't style-file defined
+--line 62 of file literatur.bib
+Warning--entry type for "MarkMcCall." isn't style-file defined
+--line 72 of file literatur.bib
+Warning--entry type for "Prof.Dr.AlfredIrber." isn't style-file defined
+--line 83 of file literatur.bib
+Warning--entry type for "Prof.Dr.Ing.WolfgangSchroderPreikschat." isn't style-file defined
+--line 96 of file literatur.bib
+Warning--entry type for "SebastianMeyer." isn't style-file defined
+--line 109 of file literatur.bib
+Warning--entry type for "SISOStandardsActivityCommitteeoftheIEEEComputerSociety." isn't style-file defined
+--line 132 of file literatur.bib
+Warning--entry type for "SISOStandardsActivityCommitteeoftheIEEEComputerSociety.6November2015" isn't style-file defined
+--line 143 of file literatur.bib
+Warning--entry type for "Wikipedia." isn't style-file defined
+--line 159 of file literatur.bib
+Warning--to sort, need author or key in Wikipedia.
+Warning--empty publisher in HelmutErlenkotter.
+Warning--empty year in HelmutErlenkotter.
+Warning--empty journal in Shanks.
+Warning--empty year in Shanks.
+(There was 1 error message)

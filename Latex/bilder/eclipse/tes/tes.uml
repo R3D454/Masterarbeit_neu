@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_WGubUJc4EeiBPM0RSXGlkw" name="tes">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_WPxCkJc4EeiBPM0RSXGlkw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_MNbJAJc6EeiHP6OfvZWv2g">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://PapyrusC_Cpp_PROFILES/C_Cpp.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_NS7YgJc6EeiHP6OfvZWv2g">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_--vu8JmvEeih4Ju02BL08w">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0XX54Jc5EeiczotiteEFPQ" name="Klasse1" visibility="public">
+      <generalization xmi:type="uml:Generalization" xmi:id="_38r3cJodEeiYu5vqFihpmQ" general="_1exVcJobEeiYu5vqFihpmQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1tbt4Jc5EeiczotiteEFPQ" name="Variable 2" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2BMXYJc5EeiczotiteEFPQ" name="Variable 1" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8C7QUJc5EeiczotiteEFPQ" name="Variable 3" visibility="protected">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_d9APgJmzEeih4Ju02BL08w" name="Counter" visibility="private" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2WEbMJc5EeiczotiteEFPQ" name="getVariable2">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nEIFsJc6EeiHP6OfvZWv2g" name="zahl" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_21UjAJc5EeiczotiteEFPQ" name="Methode 2" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_INRGQJc6EeiHP6OfvZWv2g" name="Methode 3" visibility="protected"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_dftJIJc6EeiHP6OfvZWv2g" name="setVariable2">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_k-HbcJc6EeiHP6OfvZWv2g" name="zahl">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DpC64JmwEeih4Ju02BL08w" name="Klasse">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QePrsJmwEeih4Ju02BL08w" name="Value">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jfCcEJmwEeih4Ju02BL08w" name="Klasse"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WEZpoJm1Eeih4Ju02BL08w" name="Mehtode 4" isStatic="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1exVcJobEeiYu5vqFihpmQ" name="Klasse2">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RHF8UJocEeiYu5vqFihpmQ" name="Name" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_AS1NAJmwEeih4Ju02BL08w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AS3pQJmwEeih4Ju02BL08w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/C_Cpp/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusC_Cpp_PROFILES/C_Cpp.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_BW0ZkJmwEeih4Ju02BL08w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BW1AoJmwEeih4Ju02BL08w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_JDa44JmwEeih4Ju02BL08w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JDcHAJmwEeih4Ju02BL08w" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDcHAZmwEeih4Ju02BL08w" key="Version" value="0.1.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDcHApmwEeih4Ju02BL08w" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDcHA5mwEeih4Ju02BL08w" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDcHBJmwEeih4Ju02BL08w" key="Date" value="2015-01-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDcHBZmwEeih4Ju02BL08w" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JDbf8JmwEeih4Ju02BL08w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_HLzP8JmwEeih4Ju02BL08w" base_BehavioralFeature="_DpC64JmwEeih4Ju02BL08w"/>
+  <standard:Destroy xmi:id="_lu3wsJmwEeih4Ju02BL08w" base_BehavioralFeature="_jfCcEJmwEeih4Ju02BL08w"/>
+</xmi:XMI>

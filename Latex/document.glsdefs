@@ -1,0 +1,60 @@
+\ifglsentryexists{pda}{}%
+{%
+\gls@defglossaryentry{pda}%
+{%
+name={pdaaa},%
+sort={pdaaa},%
+type={acronym},%
+first={pdaaaaaaaaaa\glsspace (pdaaa)},%
+firstplural={pdaaaaaaaaaas\glsspace (pdaaas)},%
+text={pdaaa},%
+plural={pdaaas},%
+description={pdaaaaaaaaaa},%
+descriptionplural={pdaaaaaaaaaa\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={pdaaaaaaaaaa},%
+longplural={pdaaaaaaaaaas},%
+short={pdaaa},%
+shortplural={pdaaas},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{cpu}{}%
+{%
+\gls@defglossaryentry{cpu}%
+{%
+name={CPU},%
+sort={CPU},%
+type={acronym},%
+first={Central Processing Unit\glsspace (CPU)},%
+firstplural={Central Processing Unit\acrpluralsuffix \glsspace (CPU\acrpluralsuffix )},%
+text={CPU},%
+plural={CPU\acrpluralsuffix },%
+description={Central Processing Unit},%
+descriptionplural={Central Processing Unit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Central Processing Unit},%
+longplural={Central Processing Units},%
+short={CPU},%
+shortplural={CPUs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

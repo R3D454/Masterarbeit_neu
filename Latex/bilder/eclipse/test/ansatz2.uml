@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_vjwwcKB6EeigjbikMAn0Gw" name="ansatz2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_vmxBIKB6EeigjbikMAn0Gw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wa-FQKB6EeigjbikMAn0Gw" name="DISClass">
+    <generalization xmi:type="uml:Generalization" xmi:id="_CdczQKB7EeigjbikMAn0Gw" general="_At1PwKB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_uPiPsKRwEeigNrt5VLylpw" name="DIS_EntityStatePDU" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_q9Ri0KRyEeigNrt5VLylpw" name="createPDU">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_q9SJ4KRyEeigNrt5VLylpw" name="attribute"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_At1PwKB7EeigjbikMAn0Gw" name="Object">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5VaQsKB6EeigjbikMAn0Gw" name="Attributes" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rWgiMKRyEeigNrt5VLylpw" name="Operations"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_A5iJcKB7EeigjbikMAn0Gw" name="ConvertToHLA">
+    <generalization xmi:type="uml:Generalization" xmi:id="_7Z5GQKRyEeigNrt5VLylpw" general="_At1PwKB7EeigjbikMAn0Gw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fPkToKR0EeigNrt5VLylpw" name="Attributes" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Mzxt4KB7EeigjbikMAn0Gw" name="convertToHLA">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gltSEKRyEeigNrt5VLylpw" name="ESPDU"/>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>

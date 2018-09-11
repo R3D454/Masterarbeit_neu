@@ -1,0 +1,30 @@
+\ifglsentryexists{dis}{}%
+{%
+\gls@defglossaryentry{dis}%
+{%
+name={DIS},%
+sort={DIS},%
+type={acronym},%
+first={Distributed Interactive Simulation\glsspace (DIS)},%
+firstplural={Distributed Interactive Simulation\acrpluralsuffix \glsspace (DIS\acrpluralsuffix )},%
+text={DIS},%
+plural={DIS\acrpluralsuffix },%
+description={Distributed Interactive Simulation},%
+descriptionplural={Distributed Interactive Simulation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Distributed Interactive Simulation},%
+longplural={Distributed Interactive Simulations},%
+short={DIS},%
+shortplural={DISs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
